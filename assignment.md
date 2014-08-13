@@ -2,12 +2,16 @@
 
 In this assignment, you'll be implementing the game Blackjack. If you're unfamiliar with the rules of the game, read [this](http://en.wikipedia.org/wiki/Blackjack) or pair yourself with someone who knows them.
 
-We'll start by implementing a simplified version of Blackjack:
+We'll start by implementing a simplified version of the game:
 
-1. We'll only have the dealer and the player.
-2. You can only hit or stay (no split or double down)
+1. There should only be the dealer and one player.
+1. The player can only hit or stay (no split or double down).
 
-The dealer should play by the rules of hitting at 16 or lower, staying at 17 or higher.
+Some notes on the implementation:
+
+1. The dealer should play by the rules of hitting at 16 or lower, staying at 17 or higher.
+1. The payout for Blackjack should be 3:2.
+1. The player should start with a fixed amount of money, and should be able to play until bankrupt or quitting.
 
 
 ## Starter Code
@@ -31,10 +35,17 @@ As you write your code, you should write test code along side it. Take a look at
 You should be able to play the game on the command line, by typing in your moves. You can use python's `input` and `raw_input` functions for this.
 
 
+## What to Submit
+
+* 'blackjack.py': Running `python blackjack.py` should run your game
+* Any other python files you have included (you might want to separate your player code from your blackjack game code)
+* `test_blackjack.py`: A set of nose tests of the blackjack game.
+
+
 ## Extra Credit
 
 Once you complete it and feel confident that it is correct, you can implement additional features:
 
-** Allow for any number of players
-** Implement a computer player
-** Implement double down and/or split
+* Allow for any number of players
+* Implement a computer player
+* Implement double down and/or split
