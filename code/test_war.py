@@ -1,6 +1,7 @@
 import nose.tools as n
 from deck import Card
-from war import Player, War
+from war import War
+from war_player import Player
 
 def test_player_init():
     player = Player("name")
