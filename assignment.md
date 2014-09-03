@@ -1,4 +1,18 @@
-# Object Oriented Programming: Blackjack
+# Object Oriented Programming
+
+# Warmup exercise
+
+Take a look at the code for the game war in [war.py](code/war.py) and [war_player](code/war_player.py). The code is explained in the [notes](notes.md).
+
+Modify the game so that after each round (after each time someone wins the pot) it prints the number of cards each player has like this:
+
+```
+Joe has 40 cards and Ann has 12 cards.
+```
+
+Only do this when the pot is empty, so the values should always add up to 52.
+
+# Assignment: Blackjack
 
 In this assignment, you'll be implementing the game Blackjack. If you're unfamiliar with the rules of the game, read [this](http://en.wikipedia.org/wiki/Blackjack) or pair yourself with someone who knows them.
 

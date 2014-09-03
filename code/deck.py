@@ -9,7 +9,7 @@ class Card(object):
         self.suit = suit
         self.number = number
 
-    def __str__(self):
+    def __repr__(self):
         return "%s%s" % (self.number, self.suit)
 
     def __cmp__(self, other):
