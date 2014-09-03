@@ -1,33 +1,5 @@
-import random
 from deck import Deck
-
-class Player(object):
-    def __init__(self, name):
-        self.name = name
-        self.hand = []
-        self.discard = []
-
-    def receive_card(self, card):
-        self.discard.append(card)
-
-    def receive_cards(self, cards):
-        self.discard.extend(cards)
-
-    def play_card(self):
-        if not self.hand:
-            random.shuffle(self.discard)
-            self.hand = self.discard
-            self.discard = []
-        if not self.hand:
-            return None
-        card = self.hand.pop()
-        return card
-
-    def __str__(self):
-        return self.name
-
-    def __len__(self):
-        return len(self.hand) + len(self.discard)
+from war_player import Player
 
 
 class War(object):
@@ -42,7 +14,7 @@ class War(object):
 
     def create_player(self, title):
         if self.human:
-            name = raw_input("Enter %s's name: ")
+            name = raw_input("Enter %s's name: " % title)
         else:
             name = title
         return Player(name)

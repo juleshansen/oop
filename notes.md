@@ -245,3 +245,20 @@ These are the important methods:
 When you look at the code in [war.py](code/war.py), you'll notice there are a bunch of other functions. One thing you'll notice is that all of the displaying of the game was separated into separate methods (`display_play`, `display_receive`, `display_war` and `display_winner`). It's nice to separate out the display functions in case later you want to create a fancy UI. Then you don't have to modify any of the game functionality, just the display.
 
 You'll also notice that a few helper methods like `draw_card`, `draw_cards`, `war` and `give_cards` were created to simplify the code for the `play_round` method.
+
+
+## Testing!
+
+We will be using `nose` to test our code. The syntax is very simple. Basically, you need to write a function for each test you want to run. The challenge is to determine what the necessary tests are.
+
+When writing tests, you want to think about all the edge cases and make sure your code won't break. For example, for the `Card` and `Deck` classes, you want to test the following things:
+
+* Initializing a card sets the number and suit correctly
+* You get the correct string representation of a card
+* Comparisons work correctly (<, >, ==)
+* The deck is initiazed correctly (has 52 unique cards)
+* Drawing a card works (you get a card and now the deck has one less card)
+
+You can use tests to make sure that you are implementing your code correctly and also to make sure that when you implement additional features you don't break anything.
+
+You can find test examples in [test_deck.py](code/test_deck.py) and [test_war.py](code/test_war.py).
