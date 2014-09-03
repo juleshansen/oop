@@ -32,7 +32,7 @@ class Player(object):
 
 class War(object):
     def __init__(self, human=True):
-        self.human=human
+        self.human = human
         self.player1 = self.create_player("Player 1")
         self.player2 = self.create_player("Player 2")
         self.winner = None
