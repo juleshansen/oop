@@ -62,7 +62,7 @@ class Deck(object):
     def __init__(self):
         self.cards = []
         for num in ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q' 'K', 'A']:
-            for suit in 'CDHS':
+            for suit in 'cdhs':
                 self.cards.append(Card(num, suit))
 
     def shuffle(self):
@@ -133,9 +133,9 @@ Here is an implementation of this function for the `Card` class:
 You can now run the following code:
 
 ```python
-In [1]: card1 = Card('5', 'C')
-In [2]: card2 = Card('7', 'D')
-In [3]: card3 = Card('7', 'H')
+In [1]: card1 = Card('5', 'c')
+In [2]: card2 = Card('7', 'd')
+In [3]: card3 = Card('7', 'h')
 
 In [4]: card1 > card2
 Out[4]: False
@@ -149,7 +149,7 @@ Out[5]: True
 If you try to print your object, you will get something like this:
 
 ```python
-In [1]: card = Card('A', 'D')
+In [1]: card = Card('A', 'd')
 
 In [2]: print card
 <Card object at 0x10a2ce210>
@@ -165,10 +165,10 @@ If you would like to be able to print out your object in a human-readable form, 
 Now, this will happen when you try to print the card:
 
 ```python
-In [1]: card = Card('A', 'D')
+In [1]: card = Card('A', 'd')
 
 In [2]: print card
-AD
+Ad
 ```
 
 You can of course modify the output however you'd like, putting a space or symbol between the number and suit:
@@ -177,7 +177,7 @@ You can of course modify the output however you'd like, putting a space or symbo
         return "|%s|%s|" % (self.number, self.suit)
 ```
 
-This gives an output like this: `|A|D|`.
+This gives an output like this: `|A|d|`.
 
 
 #### Card and Deck implementations
