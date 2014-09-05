@@ -20,7 +20,7 @@ class Deck(object):
     def __init__(self):
         self.cards = []
         for num in Card.value_dict.keys():
-            for suit in 'CDHS':
+            for suit in 'cdhs':
                 self.cards.append(Card(num, suit))
 
     def shuffle(self):
