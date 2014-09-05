@@ -256,7 +256,7 @@ When writing tests, you want to think about all the edge cases and make sure you
 * Initializing a card sets the number and suit correctly
 * You get the correct string representation of a card
 * Comparisons work correctly (<, >, ==)
-* The deck is initiazed correctly (has 52 unique cards)
+* The deck is initialized correctly (has 52 unique cards)
 * Drawing a card works (you get a card and now the deck has one less card)
 
 You can use tests to make sure that you are implementing your code correctly and also to make sure that when you implement additional features you don't break anything.
