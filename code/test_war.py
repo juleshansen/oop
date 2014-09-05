@@ -10,7 +10,7 @@ def test_player_init():
 
 def test_player_receive_play():
     player = Player("name")
-    card = Card("J", "C")
+    card = Card("J", "c")
     player.receive_card(card)
     n.assert_equal(len(player), 1)
     n.assert_equal(player.play_card(), card)
