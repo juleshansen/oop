@@ -3,27 +3,27 @@ import nose.tools as n
 
 
 def test_card_init():
-    card = Card("J", "S")
+    card = Card("J", "s")
     n.assert_equal(card.number, "J")
-    n.assert_equal(card.suit, "S")
+    n.assert_equal(card.suit, "s")
 
 def test_card_str():
-    card = Card("A", "C")
-    n.assert_equal(str(card), "AC")
+    card = Card("A", "c")
+    n.assert_equal(str(card), "Ac")
 
 def test_card_lt():
-    card1 = Card("3", "D")
-    card2 = Card("8", "D")
+    card1 = Card("3", "d")
+    card2 = Card("8", "d")
     n.assert_less(card1, card2)
 
 def test_card_gt():
-    card1 = Card("K", "S")
-    card2 = Card("10", "C")
+    card1 = Card("K", "s")
+    card2 = Card("10", "c")
     n.assert_greater(card1, card2)
 
 def test_card_equal():
-    card1 = Card("5", "C")
-    card2 = Card("5", "H")
+    card1 = Card("5", "c")
+    card2 = Card("5", "h")
     n.assert_equal(card1, card2)
 
 def test_deck_init():
