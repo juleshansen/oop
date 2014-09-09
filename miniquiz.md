@@ -39,7 +39,7 @@ from code import functions
 ```
 
 
-3. Classes -- What does each of the last two lines return?
+3. Classes -- What do each of the last two lines return?
 ```python
 def bar(self,y):
     return self.x + y
