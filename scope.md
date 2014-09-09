@@ -73,7 +73,7 @@ print y #=> NameError: name 'y' is not defined
 
 Most languages are either pass by reference or pass by value.  The difference being in pass-by-reference the argument can be mutated and it effects that variable up scope, whereas in pass-by-value creates a 'copy'.  Unfortunately Python is a mixture of these in something called 'pass-by-object-reference'.  Or rather:
 
-    Object references are passed by value
+>Object references are passed by value
 
 But that may not make more sense. If you ever have a question, it is often best to try it out in a python interpreter:
 
