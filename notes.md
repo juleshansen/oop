@@ -1,5 +1,9 @@
 # Object Oriented Programming in Python
 
+In programming, there are typically two dominant paradigms to structure code: Functional and Object Oriented.  Functional programming eschews mutable state, i.e. variables, and passes information/logic through the input and output of functions. OO programming on the other hand embraces state (i.e. remembering) in the form of variables and objects.  For example, if I wanted to write a program that calculates some mathematical results, I might pass intermediate values from one function to the next through an internal variable.  
+
+Often a language chooses to focus on one, [Java](http://docs.oracle.com/javase/tutorial/java/concepts/) is almost purely OO (although that is changing with recent versions) in that you cannot even write a function outside of a class.  Others are purely functional in that you are prevented from creating variables.  Many language leverage the strengths of both of these paradigms, Python included.
+
 In Python, we have a bunch of built-in classes that we use every day. For example, Lists, Strings and Dictionaries are examples. We can create an instance of them and then use methods to operate on them.
 
 We can create a new list or dictionary with what we call a *constructor*:
@@ -31,6 +35,19 @@ Out[5]: 'y'
 
 The built-in types are very generic and have many uses. However, sometimes we would like to define our own types that fit our specific scenario.
 
+## Primer on Classes
+
+Think of a class as a blueprint.  It is a scaffold for an house we would like to build.  And since we might want to create many houses that all are very similar (though might have a few properties that differ such as color, siding, porch, etc.) we want to remember how to easily build more houses.  The class is this blueprint and an object instantiation is an individual physical house.
+
+## Data and Computation (Nouns and Verbs)
+
+### Object Oriented
+
+In OO programming, Objects are the 'first class citizen' which encapsulate both data (state) and computation.  These are separated as variables and methods.  Programs are simply a collection of objects that pass state around through 'messages' (i.e. method calls).  Methods are functions that operate on state (data) to mutate an object.  Let us unpack that a bit.
+
+![messages](http://2.bp.blogspot.com/-N2sHRubepUE/T3rFv_IjeYI/AAAAAAAAABc/qyetT9SvixU/s1600/OOP000%5B1%5D.jpg)
+
+In plain English... when you call a method on an object, you send a message to it through its arguments (or lack thereof) to update its internal state (variables).  `mean()` in the code above tells the `Variance` object to update its internal state: `self.total_length` and `self.mean`.
 
 ## Card Games as an OOP problem
 
@@ -194,7 +211,6 @@ The general rules of thumb are:
 * nouns should become classes
 * verbs should become methods
 
-
 ## Example: War Card Game
 
 We'll demonstrate how to do this by implementing the children's card game [war](http://en.wikipedia.org/wiki/War_(card_game)).
@@ -262,3 +278,171 @@ When writing tests, you want to think about all the edge cases and make sure you
 You can use tests to make sure that you are implementing your code correctly and also to make sure that when you implement additional features you don't break anything.
 
 You can find test examples in [test_deck.py](code/test_deck.py) and [test_war.py](code/test_war.py).
+
+# Appendix
+
+### Functional vs. OOP
+
+In functional programming, state never changes (programs are stateless).  Functions are 'first class citizens' and can actually be passed around like variables, used as arguments to a function, etc. (think `map()`, `reduce()`, `filter()`). Functions (and a program at large) is a series of operation to perform on an immutable data source. And functions can be passed around like data!
+
+### (Functional) Python
+```python
+def mean(data):
+    return reduce(float.__add__, data)/len(data)
+
+def sum_squared_error(data, mean):
+    return reduce(float.__add__, [ math.pow(num - mean, 2) for num in data])/len(data)
+
+def variance(data):
+    return sum_squared_error(data, mean(data))
+
+variance([1.,2.,3.,4.]) #=> 1.25
+```
+
+### (Object Oriented) Python
+```python
+class Variance(object):
+    def __init__(self, input_list):
+        self.data = input_list
+        self.total_length = 0
+        self.difference_sum = 0
+
+    def mean(self):
+        total = 0.0
+        for num in self.data:
+            total += num
+            self.total_length += 1
+        self.mean = total/self.total_length
+
+    def sum_squared_error(self):
+        for num in self.data:
+            self.difference_sum += math.pow(num - self.mean, 2)
+        self.variance = self.difference_sum / self.total_length
+
+    def compute_variance(self):
+        return self.variance
+
+variance_object = Variance([1.,2.,3.,4.])
+variance_object.mean()
+variance_object.sum_squared_error()
+variance_object.compute_variance() #=> 1.25
+```
+
+__NOTE: There is no wrong paradigm, they both have their strengths and weaknesses__
+
+## Three principles of OO programming (or something)
+
+I think that any rigid formalism around the 'tenets' of proper OO design is a little contrived... but people often refer to the 3 principles (read: benefits) of design:
+
+1. Encapsulation
+2. Polymorphism
+3. Inheritance
+
+_source: [https://python.g-node.org/python-summerschool-2013/_media/wiki/oop/oo_design_2013.pdf](https://python.g-node.org/python-summerschool-2013/_media/wiki/oop/oo_design_2013.pdf)_
+
+### Encapsulation
+
+Encapsulation allows you to create proper abstractions and abstractions are _THE_ most powerful concept of computer science.  Encapsulation is the practice of only exposing what is necessary to the outside world (i.e. code outside of your class).  Think of the methods and instance variables as the interface into the code contained within the object.  This lets the programmer dictate how their code is used and actually can force people to think differently.  One of my favorite examples of good OO design principles is within the `scikit-learn` library.  Do not worry if you do not understand any of the code here or the algorithms implemented... that is the joy of OO design and proper encapsulation.
+
+All you have to understand is the following concepts:
+
+> A machine learning model is an interface.  It takes data and labels.  From these data and labels it learns what patterns are associated with what labels.  This process is called fitting (or training) a model.  If you then give it data without labels, it can predict what those labels should be.  This is all we need to know and the library has properly abstracted all the messy details from us.
+
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+
+# get data and labels
+X, y = iris.data, iris.target
+
+# create a classifier object.  
+clf = KNeighborsClassifier(n_neighbors=1)
+
+# Initialization state == number of neighbors.
+# this takes some domain knowledge of the internals of
+# the object.  Most libraries use sane defaults however
+# 
+# clf = KNeighborsClassifier()
+
+# Train our classifier model (change internal state)
+clf.fit(X, y)
+
+# predict on new values
+y_pred = clf.predict(new_data)
+```
+
+Notice how `.fit()` did not return any value?  If this were a functional interface, data would go in and a trained model would come out.  `scikit-learn` adheres to many principles of good OO design and because of this, `.fit()` simply mutates the internal state of the classifier.  It is in this internal state (variables) that the trained model (and its parameters) resides.
+
+### Inheritance (extensibility)
+
+![inheritance](http://techsharer.com/wp-content/uploads/2013/11/TIJ308.png)
+
+Inheritance is the ability of one class to override behavior of its 'parent' class to allow for customized behavior.  With inheritance, a 'child' class has all of the features and functionality (methods) of its 'parent' unless explicitly overriden.  Stepping away from our `scikit-learn` example for a second here, I will demonstrate inheritance with a much simpler example.
+
+```python
+class Animal(object):
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print "My name is " + self.name
+
+    def eat(self, food):
+        print "I love " + food
+
+frank = Animal("Frank")
+frank.speak() #=> "My name is Frank"
+frank.eat("bananas") #=> "I love bananas"
+
+class Dog(Animal):
+    def __init__(self, name):
+        Animal.__init__(self, name)
+
+    def eat(self):
+        print "I like biscuits!"
+
+fido = Dog("Fido")
+fido.speak() #=> "My name is Fido"
+fido.eat() #=> "I like biscuits!"
+```
+
+### Polymorphism
+
+Related to (empowered by) inheritance, polymorphism enables us to use a shared interface for similar objects, while still allowing each object to have its own specialized behavior. It does this through inheritance of a common parent and subclassing.
+
+> Polymorphism refers to a programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability to redefine methods for derived classes.
+
+For `scikit-learn` this simply means that the internals of the model you are training can be drastically different (i.e. kNN vs. Decision Tree) but the methods you call for each are identical.
+
+```python
+from sklearn import tree
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+
+# get data and labels
+X, y = iris.data, iris.target
+
+# create a kNN classifier object.  
+clf = KNeighborsClassifier(n_neighbors=1)
+
+# Train our classifier model
+clf.fit(X, y)
+
+# predict on new values
+y_pred = clf.predict(new_data)
+
+# Decide we want to experiment with a DecisionTree
+clf = tree.DecisionTreeClassifier()
+
+# Train our classifier model
+clf.fit(X, y)
+
+# predict on new values
+y_pred = clf.predict(new_data)
+```
+Notice that since a DecisionTree model and kNN model both have a `fit()` method defined that takes the same inputs (or many of the same), we can optimistically call `fit()` on whatever type of model the `clf` variable references.  This allows us to do some pretty powerful things with our models (i.e. GridSearch parameter optimization) which we will see later in the course.
