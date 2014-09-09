@@ -18,15 +18,17 @@ print second_list
 
 
 2. Python Modules
-What do you need to do to make a folder a Python package?  Assume this is what I want:
+What do you need to do to make a folder a Python package?  Assume this is what I have:
 
 ```bash
 ├── my_project
-│   ├── code
-│   │   └── functions.py
-│   ├── main.py
-│   └── readme.md
+    ├── code
+    │   └── functions.py
+    ├── main.py
+    └── readme.md
 ```
+
+And this is what I want to do:
 
 ```python
 # file main.py
