@@ -39,7 +39,7 @@ from code import functions
 ```
 
 
-3. Classes -- What gets printed to the console of what error gets thrown in the last two lines?
+3. Classes -- What gets printed to the console or what error gets thrown in the last two lines?
 ```python
 def bar(self,y):
     return self.x + y
