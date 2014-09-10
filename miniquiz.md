@@ -2,7 +2,7 @@
 
 This mini quiz will cover object oriented principles and Python scoping.  You should be able to finish this in 15 minutes (but can in less than 5min) using the required readings as a resources.
 
-1. Python Scope -- What should get printed to the console and why (try to do it without running the code)?
+1. Python Scope -- What should get printed to the console or what error gets thrown and why (try to do it without running the code)?
 
 ```python
 def append_to_list(element, my_list=[]):
@@ -39,7 +39,7 @@ from code import functions
 ```
 
 
-3. Classes -- What do each of the last two lines return?
+3. Classes -- What gets printed to the console of what error gets thrown in the last two lines?
 ```python
 def bar(self,y):
     return self.x + y
