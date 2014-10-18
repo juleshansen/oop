@@ -438,8 +438,6 @@ _More info: [http://freepythontips.wordpress.com/2013/08/07/the-self-variable-in
 
 Another handy tool when learning about scope and stacks is the [stack visualization tool](http://pythontutor.com) at pythontutor.com.  Here is a great [tutorial](http://cscircles.cemc.uwaterloo.ca/11b-how-functions-work/) on visually exploring variable scope in Python as you execute a program.  Scope gets more specific as you go down, i.e. the top of the image (`Global Frame`) is the top most scope and `sum_squared_error` is the most specific.  Each box on the left represents a different scope (created when we call a function).  The nested scopes can look up/out but the outer scopes cannot look in.  For example, `sum_squared_error` can access anything defined in any scope above it (unless it is shielded by another function or class) but the global scope cannot peek into the `sum_squared_error` function and its variables.  To move data/values/variables between scope you either pass arguments and return values: __function arguments -> down/into scope :: return values -> up/out scope__
 
-# Appendix
-
 ### Functional vs. OOP
 
 In functional programming, state never changes (programs are stateless).  Functions are 'first class citizens' and can actually be passed around like variables, used as arguments to a function, etc. (think `map()`, `reduce()`, `filter()`). Functions (and a program at large) is a series of operation to perform on an immutable data source. And functions can be passed around like data!
