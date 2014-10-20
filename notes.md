@@ -604,18 +604,6 @@ y_pred = clf.predict(new_data)
 ```
 Notice that since a DecisionTree model and kNN model both have a `fit()` method defined that takes the same inputs (or many of the same), we can optimistically call `fit()` on whatever type of model the `clf` variable references.  This allows us to do some pretty powerful things with our models (i.e. GridSearch parameter optimization) which we will see later in the course.
 
---
-
-Visualized Execution of the example `Variance` class from above: 
-
-![oo](images/oo.png)
-
-#### <a href="http://www.pythontutor.com/visualize.html#code=import+math%0A%0Aclass+Variance(object)%3A%0A++++def+__init__(self,+input_list)%3A%0A++++++++self.data+%3D+input_list%0A++++++++self.total_length+%3D+0%0A++++++++self.difference_sum+%3D+0%0A%0A++++def+mean(self)%3A%0A++++++++total+%3D+0.0%0A++++++++for+num+in+self.data%3A%0A++++++++++++total+%2B%3D+num%0A++++++++++++self.total_length+%2B%3D+1%0A++++++++self.mean+%3D+total/self.total_length%0A%0A++++def+sum_squared_error(self)%3A%0A++++++++for+num+in+self.data%3A%0A++++++++++++self.difference_sum+%2B%3D+math.pow(num+-+self.mean,+2)%0A++++++++self.variance+%3D+self.difference_sum+/+self.total_length%0A%0A++++def+compute_variance(self)%3A%0A++++++++return+self.variance%0A++++%0Avari+%3D+Variance(%5B1.,2.,3.,4.%5D)%0Avari.mean()%0Avari.sum_squared_error()%0Avari.compute_variance()&mode=display&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=2&curInstr=0">Interactive</a> OO
-
---
-
-![functional](images/functional.png)
-#### <a href="http://www.pythontutor.com/visualize.html#code=import+math%0A%0Adef+mean(data)%3A%0A++++return+reduce(float.__add__,+data)/len(data)%0A%0Adef+sum_squared_error(data,+mean)%3A%0A++++return+reduce(float.__add__,+%5B+math.pow(num+-+mean,+2)+for+num+in+data%5D)/len(data)%0A%0Adef+variance(data)%3A%0A++++return+sum_squared_error(data,+mean(data))%0A%0Avariance(%5B1.,2.,3.,4.%5D)&mode=display&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=2&curInstr=0">Interactive</a> Functional
 
 <!-- References -->
 [1]: http://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping_vs._dynamic_scoping
