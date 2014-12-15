@@ -1,58 +1,36 @@
-## Mini Quiz
+## 1. SQL
 
-This mini quiz will cover object oriented principles and Python scoping.  You should be able to finish this in 15 minutes (but can in less than 5min) using the required readings as a resources.
+Assume we have a table with the following schema:
 
-1. Python Scope -- What should get printed to the console or what error gets thrown and why (try to do it without running the code)?
-
-```python
-def append_to_list(element, my_list=[]):
-    my_list.append(element)
-    return my_list
-    
-first_list = append_to_list(12)
-print first_list
-
-second_list = append_to_list(42)
-print second_list
-```
+|user_id | item_id | price | source |
+|:--:| :--:|:--:|:--:|
+| 2 | 45 | 25 | in_store |
+| 567 | 5 | 12 | online |
+| 57 | 200 | 9 | affiliate |
+| 10 | 7 | 703 | online |
+| ... | ... | ... | ... |
 
 
-2. Python Modules
-What do you need to do to make a folder a Python package?  Assume this is what I have:
+Write a SQL query that returns total amount of revenue from the affiliate network.
 
-```bash
-├── my_project
-    ├── code
-    │   └── functions.py
-    ├── main.py
-    └── readme.md
-```
+## 2. Joins 
 
-And this is what I want to do:
+What is the resulting table of...
+1. An inner join
+2. A left outer join
+3. A full outer join
 
-```python
-# file main.py
+| employee_id | department_id | name | salary |
+|:--:|:--:|:--:|:--:|
+| 2 | 1 | Jon | 40000 |
+| 7 | 1 | Linda | 50000 |
+| 12 | 2 | Ashley | 15000 |
+| 1 | 0 | Mike | 80000 |
 
-from code import functions
+and
 
-...
-```
-
-
-3. Classes -- What gets printed to the console or what error gets thrown in the last two lines?
-```python
-def bar(self,y):
-    return self.x + y
- 
-class Foo(object):
-    x = 9
-    def __init__(self,x):
-        self.x = x
-    bar = bar
-
-foo = Foo(5)
-
-# What happens here?
-print Foo.bar(foo,4) == 9
-print Foo.bar(Foo,0) == 9
-```
+| department_id | location |
+|:--:|:--:|
+| 1 | NY |
+| 2 | SF |
+| 3 | Austin |
