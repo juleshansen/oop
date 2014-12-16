@@ -1,6 +1,6 @@
 ## 1. SQL
 
-Assume we have a table with the following schema:
+Assume we have a table called `sales` with the following schema:
 
 |user_id | item_id | price | source |
 |:--:| :--:|:--:|:--:|
@@ -10,8 +10,9 @@ Assume we have a table with the following schema:
 | 10 | 7 | 703 | online |
 | ... | ... | ... | ... |
 
+1. Write a SQL query that returns total amount of revenue from the affiliate network.
 
-Write a SQL query that returns total amount of revenue from the affiliate network.
+2. Write a SQL query that returns total amount of revenue from each source.
 
 ## 2. Joins 
 
