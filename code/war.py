@@ -42,6 +42,7 @@ class War(object):
 
     def draw_cards(self, player, other_player, n):
         cards = []
+        n = min(n, len(player.hand), len(other_player.hand))
         for i in xrange(n):
             card = self.draw_card(player, other_player)
             if not card:
