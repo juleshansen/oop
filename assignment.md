@@ -14,7 +14,7 @@ Only do this when the pot is empty, so the values should always add up to 52.
 
 # Assignment: Blackjack
 
-In this assignment, you'll be implementing the game Blackjack. If you're unfamiliar with the rules of the game, read [this](http://en.wikipedia.org/wiki/Blackjack) or pair yourself with someone who knows them.
+In this assignment, you'll be implementing the game Blackjack. If you're unfamiliar with the rules of the game, read [this](http://en.wikipedia.org/wiki/Blackjack), [play a game online](http://wizardofodds.com/play/blackjack/) or pair yourself with someone who knows them.
 
 We'll start by implementing a simplified version of the game:
 
