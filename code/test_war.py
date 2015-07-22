@@ -35,3 +35,19 @@ def test_play_game():
         n.assert_equal(len(game.player2), 0)
     else:
         n.assert_equal(len(game.player1), 0)
+
+def test_war_size():
+    game = War(war_size=5, human=False)
+    game.play_round() #Play first to shuffle hand
+    game.war()
+    n.assert_equal(len(game.pot), 10)
+        
+def test_play_two_of_three():
+    game = War(human=False)
+    #There should be a dictionary that tracks win counts.
+    n.assert_equal(max(game.win_counts.values()), 0)
+    game.play_two_of_three()
+    n.assert_equal(max(game.win_counts.values()), 2)
+    #Make sure you don't get too many cards!
+    n.assert_equal(len(game.player1) + len(game.player2), 52)
+    
