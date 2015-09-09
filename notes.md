@@ -78,7 +78,7 @@ import random
 class Deck(object):
     def __init__(self):
         self.cards = []
-        for num in ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q' 'K', 'A']:
+        for num in ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']:
             for suit in 'cdhs':
                 self.cards.append(Card(num, suit))
 
@@ -119,9 +119,9 @@ Out[6]: False
 (Note that with this implementation, the cards go in order until you shuffle the deck.)
 
 
-## Special methods
+## Magic methods
 
-In python, there are some special methods that we can implement.
+In python, there are what we call *magic methods*.
 
 #### Length function
 
@@ -196,6 +196,7 @@ You can of course modify the output however you'd like, putting a space or symbo
 
 This gives an output like this: `|A|d|`.
 
+***For a full list of magic methods, take a look at [this blog post](http://www.rafekettler.com/magicmethods.html).***
 
 #### Card and Deck implementations
 
