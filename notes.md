@@ -414,7 +414,7 @@ frank.eat("bananas") #-> Animal.eat(frank, "bananas")
     #=> "I adore bananas"
 ```
 
-The object a method is called on is always passed as the first argument (`self`).  In this case, the object `frank` of the class `Animal` is passed as the first argument to the method call `eat(...)`.  This ensures that we always explicitly have access to the object the method belongs to.  When we create a new object instantiation of the class `Animal`, we bind the variable `self` to the object created.  In this case, the call to `Animal("Frank")` binds the variable `self` to the returned object.  This instantialion also runs the code in the class's `__init__()` method implicitly.  `__init()__` is just a function though and we can (though it is very bad practice to) call it once a object has been created.
+The object a method is called on is always passed as the first argument (`self`).  In this case, the object `frank` of the class `Animal` is passed as the first argument to the method call `eat(...)`.  This ensures that we always explicitly have access to the object the method belongs to.  When we create a new object instantiation of the class `Animal`, we bind the variable `self` to the object created.  In this case, the call to `Animal("Frank")` binds the variable `self` to the returned object.  This instantiation also runs the code in the class's `__init__()` method implicitly.  `__init()__` is just a function though and we can (though it is very bad practice to) call it once a object has been created.
 
 ```python
 class Person(object):
@@ -538,7 +538,7 @@ Notice how `.fit()` did not return any value?  If this were a functional interfa
 
 ![inheritance](http://techsharer.com/wp-content/uploads/2013/11/TIJ308.png)
 
-Inheritance is the ability of one class to override behavior of its 'parent' class to allow for customized behavior.  With inheritance, a 'child' class has all of the features and functionality (methods) of its 'parent' unless explicitly overriden.  Stepping away from our `scikit-learn` example for a second here, I will demonstrate inheritance with a much simpler example.
+Inheritance is the ability of one class to override behavior of its 'parent' class to allow for customized behavior.  With inheritance, a 'child' class has all of the features and functionality (methods) of its 'parent' unless explicitly overridden.  Stepping away from our `scikit-learn` example for a second here, I will demonstrate inheritance with a much simpler example.
 
 ```python
 class Animal(object):
