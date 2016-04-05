@@ -47,7 +47,7 @@ In OO programming, Objects are the 'first class citizen' which encapsulate both 
 
 ![messages](http://2.bp.blogspot.com/-N2sHRubepUE/T3rFv_IjeYI/AAAAAAAAABc/qyetT9SvixU/s1600/OOP000%5B1%5D.jpg)
 
-In plain English... when you call a method on an object, you send a message to it through its arguments (or lack thereof) to update its internal state (variables).  `mean()` in the code above tells the `Variance` object to update its internal state: `self.total_length` and `self.mean`.
+In plain English... when you call a method on an object, you send a message to it through its arguments (or lack thereof) to update its internal state (variables). E.g. the `mean()` method of the `Variance` class (see Appendix) sends a message to the `Variance` object telling it that it should update its state: `self.total_length` and `self.mean`.
 
 ## Card Games as an OOP problem
 

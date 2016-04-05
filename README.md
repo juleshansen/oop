@@ -1,4 +1,4 @@
-l# Object Oriented Programming
+# Object Oriented Programming
 
 Today we'll be getting practice with writing object oriented programming.
 
