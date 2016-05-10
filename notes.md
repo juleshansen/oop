@@ -296,8 +296,6 @@ echo $x # does this print 1, or 2?
 
 __LEGB Rule__
 
-![scope][2]
-
 __L: Local.__ (Names assigned in any way within a function (def or lambda)), and not declared global in that function.
 
 __E: Enclosing function locals.__ (Name in the local scope of any and all enclosing functions (def or lambda), from inner to outer.
@@ -608,7 +606,6 @@ Notice that since a DecisionTree model and kNN model both have a `fit()` method 
 
 <!-- References -->
 [1]: http://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping_vs._dynamic_scoping
-[2]: http://developer.nokia.com/community/wiki/images/b/b5/Figure2-1.png?20101129095437
 [3]: http://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/
 [4]: http://www.sciencephotography.com/xrayfish/xray%20jan24-06/Russian-doll1.jpg
 
