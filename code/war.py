@@ -42,17 +42,18 @@ class War(object):
 
     def draw_cards(self, player, other_player, n):
         cards = []
-        n = min(n, len(player.hand), len(other_player.hand))
         for i in xrange(n):
             card = self.draw_card(player, other_player)
             if not card:
-                return
+                return cards
             cards.append(card)
         return cards
 
     def war(self):
-        cards1 = self.draw_cards(self.player1, self.player2, 3)
-        cards2 = self.draw_cards(self.player2, self.player1, 3)
+        n = 3
+        n = max(min(n, len(self.player1)), min(n, len(self.player2)))
+        cards1 = self.draw_cards(self.player1, self.player2, n)
+        cards2 = self.draw_cards(self.player2, self.player1, n)
         self.display_war(cards1, cards2)
 
     def play_round(self):
