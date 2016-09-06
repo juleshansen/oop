@@ -138,7 +138,7 @@ This enables you to use `len(deck)` and it will give you the number of cards in 
 
 #### Comparisons
 
-You also may want to be able to compare two cards to see which is larger or if they have the same value. You can get this functionality by implementing the '__cmp__' function. 
+You also may want to be able to compare two cards to see which is larger or if they have the same value. You can get this functionality by implementing the '__cmp__' function.
 
 Here is an implementation of this function for the `Card` class:
 
@@ -200,7 +200,7 @@ This gives an output like this: `|A|d|`.
 
 #### Card and Deck implementations
 
-You can find the code for the `Card` and `Deck` classes in [deck.py](code/deck.py).
+You can find the code for the `Card` and `Deck` classes in [deck.py](src/deck.py).
 
 
 ## How to structure your classes
@@ -242,7 +242,7 @@ And what *methods* does the player class need?
 * `receive_card`
 * `play_card`
 
-The player class is implemented in [war_player.py](code/war_player.py). There are a couple other instance variables and methods there that turned out to be useful that aren't as essential as the ones noted above.
+The player class is implemented in [war_player.py](src/war_player.py). There are a couple other instance variables and methods there that turned out to be useful that aren't as essential as the ones noted above.
 
 #### The game class
 
@@ -259,7 +259,7 @@ These are the important methods:
 * `play_round`: goes through one round of the game (each player plays a card, highest card wins. If they tie, each player plays 3 cards and then they try again.)
 * `play_game`: starts the game and calls `play_round` repeatedly until one player gets all the cards and is declared the winner.
 
-When you look at the code in [war.py](code/war.py), you'll notice there are a bunch of other functions. One thing you'll notice is that all of the displaying of the game was separated into separate methods (`display_play`, `display_receive`, `display_war` and `display_winner`). It's nice to separate out the display functions in case later you want to create a fancy UI. Then you don't have to modify any of the game functionality, just the display.
+When you look at the code in [war.py](src/war.py), you'll notice there are a bunch of other functions. One thing you'll notice is that all of the displaying of the game was separated into separate methods (`display_play`, `display_receive`, `display_war` and `display_winner`). It's nice to separate out the display functions in case later you want to create a fancy UI. Then you don't have to modify any of the game functionality, just the display.
 
 You'll also notice that a few helper methods like `draw_card`, `draw_cards`, `war` and `give_cards` were created to simplify the code for the `play_round` method.
 
@@ -278,7 +278,7 @@ When writing tests, you want to think about all the edge cases and make sure you
 
 You can use tests to make sure that you are implementing your code correctly and also to make sure that when you implement additional features you don't break anything.
 
-You can find test examples in [test_deck.py](code/test_deck.py) and [test_war.py](code/test_war.py).
+You can find test examples in [test_deck.py](src/test_deck.py) and [test_war.py](src/test_war.py).
 
 # Scope
 
@@ -307,7 +307,7 @@ __B: Built-in (Python).__ Names preassigned in the built-in names module : open,
 Python uses lexical scoping and a variable is __bound__ when it is defined (or assigned to).  When in doubt always jump into a debugger (`ipdb.set_trace()`) at the point of you program in which you are uncertain and inspect the variables.  In Python, the `locals()` method tells you exactly what is in the local scope, and the globals() tells you everything that is in the global scope.
 
 ```python
-def foo(arg): 
+def foo(arg):
     x = 1
     print locals()
 
@@ -340,7 +340,7 @@ new_scope("argument") #=> "argument"
 
 print x #=> "global"
 
-print new_scope("argument") 
+print new_scope("argument")
     #=> "argument"
     #=> "shadow variable"
 
@@ -375,7 +375,7 @@ def mutate_list(ll):
 
 new_list = ['foo', 'bar']
 
-print do_nothing(new_list) #=> "global" 
+print do_nothing(new_list) #=> "global"
                            #=> ['foo', 'bar']
 print return_list(new_list) #=> ["assign", "a", "list"]
 print mutate_list(new_list) #=> ['foo', 'bar', "Messin with my list"]
@@ -520,7 +520,7 @@ clf = KNeighborsClassifier(n_neighbors=1)
 # Initialization state == number of neighbors.
 # this takes some domain knowledge of the internals of
 # the object.  Most libraries use sane defaults however
-# 
+#
 # clf = KNeighborsClassifier()
 
 # Train our classifier model (change internal state)
@@ -611,4 +611,3 @@ Notice that since a DecisionTree model and kNN model both have a `fit()` method 
 
 <!-- Easter Eggs -->
 [gotchas]: http://docs.python-guide.org/en/latest/writing/gotchas/
-

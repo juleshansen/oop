@@ -2,6 +2,6 @@
 
 Today we'll be getting practice with writing object oriented programming.
 
-* [Example code](code)
+* [Example code](src)
 * [Individual assignment](individual.md)
 * [Pair assignment](pair.md)
