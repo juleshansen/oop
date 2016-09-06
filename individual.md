@@ -1,6 +1,6 @@
 # Individual exercise
 
-Take a look at the code for the game war in [war.py](src/war.py) and [war_player](src/war_player.py). The code is explained in the [notes](notes.md).
+Take a look at the code for the game war in [war.py](src/war.py) and [war_player.py](src/war_player.py). The code is explained in the [notes](notes.md).
 
 1. Modify the game so that after each round (after each time someone wins the pot) it prints the number of cards each player has like this:
 
