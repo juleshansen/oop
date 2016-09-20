@@ -44,6 +44,10 @@ You should be able to play the game on the command line, by typing in your moves
 * `test_blackjack.py`: A set of nose tests of the blackjack game.
 
 
+## Style note
+Students sometimes wonder why the war/blackjack games run from within their class rather than outside of it.  What's the benefit of putting those methods within the class?  In short, it comes down to the OOP tenets of Encapsulation and (potential-for-)Composition.  If we were to do all the high-level work of running the game in, say, the \__name__ == \__main__ block at the end it would work fine… for that one game.  Which would make our code pretty single-purpose.  For one assignment that’s probably fine, but imagine if we were to be building a game suite.  Maybe we’d want to play Blackjack and then War.  Or Hearts.  If each of those games required the use of the \__main__ block that would get to be a pretty big \__main__ block, and we’d have poor Encapsulation.  Another way to say that is that those games wouldn’t Compose very well, because they’re not each designed to be standalone, reusable components.  By putting the ‘run’ process for a game _within_ the game, we’ve not only made a game, we’ve made one that’s a nicely encapsulated object that we could reuse in many different contexts.
+
+
 ## Extra Credit
 
 Once you complete it and feel confident that it is correct, you can implement additional features:
