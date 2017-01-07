@@ -56,6 +56,8 @@ the last value starting with `0x` should be different. It corresponds to the ind
 
 5\. We are now going to draw `circle1`. Create an empty `list` that you call `shapelist` and put `circle1` into that list. Use `gui.draw()` to draw `shapelist`. It should display as below.
 
+**Note**: `x` and `y` are defined as coordinates of pixels on a computer screen. Then x increase from left to right, and y increase from top to bottom.
+
 <img src="img/gui_draw_circle1.png" width=320/>
 
 ### Creating instances of the `Circle` class
@@ -86,9 +88,9 @@ What do you think will happen ? Will it display the same result as before ? A di
 
 9\. Test your `Rectangle` class by creating an instance with the following parameters:
 - `x0 = 10`
-- `x0 = 50`
-- `x0 = 100`
-- `x0 = 200`
+- `y0 = 50`
+- `x1 = 100`
+- `y1 = 200`
 - `color = (255,0,255)`
 
 When using `gui.draw()` with a list made of that instance, it should display as below:
@@ -99,11 +101,20 @@ When using `gui.draw()` with a list made of that instance, it should display as 
 
 In this part we will create classes that represent set operations between the shapes we just have created. Namely, we will design union, intersection and difference between two shapes `a` and `b` as specified:
 
-**`UnionShape`**: it will have as a member both input shapes `a` and `b`, its `.f()` will compute the set union of `a.f()` and `b.()`, and its color will be the average of color components of `a.color` and `b.color`.
+**`UnionShape`**:
+- it will have as a member both input shapes `a` and `b`,
+- its `.f()` will compute the set union of `a.f()` and `b.()` : it will return true on points that belong to `a` or to `b`
+- and its color will be the average of color components of `a.color` and `b.color`.
 
-**`IntersectionShape`**: it will have as a member both input shapes `a` and `b`, its `.f()` will compute the set intersection of `a.f()` and `b.()`, and its color will be the average of color components of `a.color` and `b.color`.
+**`IntersectionShape`**:
+- it will have as a member both input shapes `a` and `b`,
+- its `.f()` will compute the set intersection of `a.f()` and `b.()` : it will return true for points that belong both to `a` and to `b`
+- and its color will be the average of color components of `a.color` and `b.color`.
 
-**`DiffShape`**: it will have as a member both input shapes `a` and `b`, its `.f()` will compute the set difference between `a.f()` and `b.()`, and its color will be the color of a (`a.color`).
+**`DiffShape`**:
+- it will have as a member both input shapes `a` and `b`,
+- its `.f()` will compute the set difference between `a.f()` and `b.()` : it will return true on points that belong to `a` but not to `b`
+- and its color will be the color of a (`a.color`).
 
 You will find the template for these three classes inside the file `operators.py`.
 
