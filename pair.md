@@ -1,4 +1,4 @@
-# Individual exercise
+# Part 1: Game War
 
 Take a look at the code for the game war in [war.py](src/war.py) and [war_player.py](src/war_player.py). The code is explained in the [notes](notes.md).
 
@@ -12,10 +12,11 @@ Take a look at the code for the game war in [war.py](src/war.py) and [war_player
 
   There are tests in test_war.py that fail. Modify war.py to make them pass.
 
-1. Add a property of the war game that allows us to change how many cards will be drawn for each war.
-1. Make the game “Best out of 3” instead of just a single game. Look at the tests for some hints about how this should be implemented. You should modify war.py to make the test pass (not the other way around).
+2. Add a property of the war game that allows us to change how many cards will be drawn for each war.
 
-# Pair exercise: Blackjack
+3. Make the game “Best out of 3” instead of just a single game. Look at the tests for some hints about how this should be implemented. You should modify war.py to make the test pass (not the other way around).
+
+# Part 2: Blackjack
 
 In this assignment, you'll be implementing the game Blackjack. If you're unfamiliar with the rules of the game, read [this](http://en.wikipedia.org/wiki/Blackjack), [play a game online](http://wizardofodds.com/play/blackjack/) or pair yourself with someone who knows them.
 

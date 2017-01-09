@@ -275,10 +275,28 @@ it should display the image below.
 
 # Extra Credit
 
-1\. Look back at the result obtained in part 2.1 and part 3.2.2 (see images below). Where does this difference come from ? What changes should you make to your scripting languages (arguments) and to `ShapeFactory` so that these results are identical ?
+If you have finished this assignment early, here are a couple of interesting ideas to add to your implementation.
+
+## Idea 1: the "z" factor
+
+Look back at the result obtained in part 2.1 and part 3.2.2 (see images below). Where does this difference come from ? What changes should you make to your scripting languages (arguments) and to `ShapeFactory` so that these results are identical ?
 
 | result of part 2 | result of part 3 |
 | :-: | :-: |
 | <img src="img/gui_draw_op12345678.png" width=320/> | <img src="img/gui_shapescript2.png" width=320/> |
 
-2\. Create a script of your own to test that proposition, and modify `ShapeFactory` accordingly.
+Create a script of your own to test that proposition, and modify `ShapeFactory` accordingly.
+
+## Idea 2: geometric transformations
+
+Design three other classes `Translation`, `Scaling` and `Rotation` that implement these respective mathematical operations.
+
+Each would be constructed by taking one input shape, and transforming it according to given parameters. For instance, for `Translation`, use two values `xshirt` and `yshift` indicating the vector for translating.
+
+Add those classes to your scripting language and have fun creating art of your own !
+
+## Idea 3: transparency
+
+This idea is fairly simple: "implement transparency so that a shape can be more or less translucid and we can see through it". But the implementation requires some thinking and refactoring.
+
+Try to imagine how you would do that. In particular, which objects would you need to modify to implement that ? Would you need to modify `simplegui.py` ? How ?
