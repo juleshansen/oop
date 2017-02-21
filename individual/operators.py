@@ -18,7 +18,8 @@ class UnionShape():
         shape_a and shape_b.
 
         Note: color or union should be the average between
-        colors of shape_a and shape_b."""
+        colors of shape_a and shape_b.
+        """
         pass
 
     def f(self, x, y):
@@ -54,7 +55,8 @@ class IntersectionShape():
         of given shapes shape_a and shape_b.
 
         Note: color or intersection should be the average between
-        colors of shape_a and shape_b."""
+        colors of shape_a and shape_b.
+        """
         pass
 
     def f(self, x, y):
@@ -88,8 +90,9 @@ class DiffShape():
     def __init__(self, shape_a, shape_b):
         """Constructs a DiffShape as difference between two given shapes
         shape_a and shape_b.
-        
-        Note: color or difference should be the color of shape_a."""
+
+        Note: color or difference should be the color of shape_a.
+        """
         pass
 
     def f(self, x, y):

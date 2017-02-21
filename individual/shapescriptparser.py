@@ -19,7 +19,8 @@ class ShapeScriptParser():
     TBD
     """
     def __init__(self, gui):
-        """Instanciates the parser, gui is provided for drawing"""
+        """Instanciates the parser, gui is provided for drawing.
+        """
         pass
 
     def parse(self, filepath):

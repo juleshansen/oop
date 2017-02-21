@@ -58,7 +58,8 @@ class Rectangle():
     """
     def __init__(self, x0, y0, x1, y1, color):
         """Constructs a Rectangle instance
-        with top-left point (x0,y0), bottom-right (x1,y1) and color."""
+        with top-left point (x0,y0), bottom-right (x1,y1) and color.
+        """
         pass
 
     def f(self, x, y):
