@@ -27,7 +27,7 @@ So, as a synthesis, in python we will define a **shape** by:
 
 ### Playing with `Circle`
 
-1\. In a text editor, open file `shape.py` and look at the example class `Circle`. As you can
+1\. In a text editor, open file `shapes.py` and look at the example class `Circle`. As you can
 see from the `__init__()` constructor method, a circle has four **attributes**. We will find the attribute :
 - `color`: an `(r,g,b)` tuple as specified above.
 
@@ -36,7 +36,18 @@ And add three other:
 - `cy`: the second coordinate of the center of the circle
 - `radius`: the radius of the circle
 
-Those attributes are used in the `.f()` method to determine if points `(x,y)` is in or out this circle. Check the content of `.f()` and identify where those attributes are used.
+Those attributes are used in the `.f()` method to determine if points `(x,y)` is in or out this circle. Below, you'll find the code of that method `.f()` of class `Circle`. Identify where `self.cx`,  `self.cy` and `self.radius` are used, and how this is used to produce a circle centered on coordinated `(cx,cy)` with the given `radius`.
+
+```python
+def f(self, x, y):
+    """Characteristic function of the shape.
+    Returns True if (x,y) is inside the shape, else False."""
+    t_dist = math.sqrt((x - self.cx)**2 + (y - self.cy)**2)
+    if (t_dist < self.radius):
+        return(True)
+    else:
+        return(False)
+```
 
 2\. In **`ipython`**, import class `Circle` from module `shapes`. Create an instance `circle1` centered on (100,100) with radius 50 and color (255, 0, 0). Type `circle1` in `ipython` to display the content of `circle1`, you should see something like:
 
@@ -82,7 +93,7 @@ What do you think will happen ? Will it display the same result as before ? A di
 
 ### Create another shape class `Rectangle`
 
-**In file `shape.py` you will find a template for a new class `Rectangle`.**
+**In file `shapes.py` you will find a template for a new class `Rectangle`.**
 
 8\. Use the template to code a `Rectangle` class, as defined by four coordinates `x0,y0,x1,y1` that form the upper left corner (`x0,y0`) and the lower right corner (`x1,y1`) of the rectangle, plus a `color`, as long as function `.f()` returning True inside the rectangle and False outside.
 
