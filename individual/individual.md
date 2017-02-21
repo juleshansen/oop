@@ -15,7 +15,7 @@ In notebook, use `%matplotlib inline` to display images into your notebook rathe
 
 We are going to develop a simple graphical interface to draw **visual shapes**. To begin, you will have to create different **shapes** that all fit into a common class description. Your shapes will be drawn on the screen using an existing class we will provide, called `SimpleGUI`.
 
-A **shape** is defined as 1) some subspace of the screen and 2) a color.
+Conceptually, a **shape** is defined as 1) some subspace of the screen and 2) a color.
 
 The subspace is defined by a characteristic function `f` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as $f(x,y) \rightarrow \{True, False\}$.
 
@@ -24,6 +24,12 @@ The color is coded as a tuple of the form `(r,g,b)` that codes the rgb component
 So, as a synthesis, in python we will define a **shape** by:
 - an **attribute** called `color` that is a tuple of the form `(r,g,b)` that codes the rgb components (between 0 and 255)
 - a **method** called `f`: takes two arguments `x` and `y` and tests if the point falls within the shape (returns True) or not (returns False).
+
+The reasons why we choose to design those shapes as classes are:
+- a shape object would contain everything needed to draw a shape ([https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)](encapsulation))
+- every shape, whether it is a circle, a rectangle, or something more complex, would fall into a unique template ([https://en.wikipedia.org/wiki/Polymorphism_(computer_science)](polymorphism))
+- one can design a mechanism to draw, to generate, to process shapes without having to know how they work internally (encapsulation + [https://en.wikipedia.org/wiki/Separation_of_concerns](separation of concerns))
+
 
 ### Playing with `Circle`
 
