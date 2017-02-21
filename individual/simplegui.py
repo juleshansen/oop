@@ -107,7 +107,7 @@ class SimpleGUI():
         for i in xrange(self.width):
             for j in xrange(self.height):
                 # if we are in one of the areas in the list
-                for o in arealist:
+                for o in shapelist:
                     if o.f(i,j):
                         # drop a pixel in there, using color of the area
                         self.pixels[i,j] = o.color
