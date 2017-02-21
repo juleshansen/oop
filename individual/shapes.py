@@ -6,7 +6,7 @@ import math
 class Circle():
     def __init__(self, cx, cy, radius, color):
         """Constructs a Circle instance
-        centered around (cx,cy) with radius and color."""
+        centered around (cx,cy) with given radius and color."""
         self.cx = cx
         self.cy = cy
         self.radius = radius
@@ -14,7 +14,17 @@ class Circle():
 
     def f(self, x, y):
         """Characteristic function of the shape.
-        Returns True if (x,y) is inside the shape, else False."""
+        Returns True if (x,y) is inside the shape, else False.
+
+        Parameters
+        ----------
+        x : int, x coordinate of a pixel
+        y : int, y coordinate of a pixel
+
+        Returns
+        -------
+        boolean : True or False whether (x,y) is within the shape.
+        """
         t_dist = math.sqrt((x - self.cx)**2 + (y - self.cy)**2)
         if (t_dist < self.radius):
             return(True)
