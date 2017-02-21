@@ -41,7 +41,17 @@ Those attributes are used in the `.f()` method to determine if points `(x,y)` is
 ```python
 def f(self, x, y):
     """Characteristic function of the shape.
-    Returns True if (x,y) is inside the shape, else False."""
+    Returns True if (x,y) is inside the shape, else False.
+
+    Parameters
+    ----------
+    x : int, x coordinate of a pixel
+    y : int, y coordinate of a pixel
+
+    Returns
+    -------
+    boolean : True or False whether (x,y) is within the shape.
+    """
     t_dist = math.sqrt((x - self.cx)**2 + (y - self.cy)**2)
     if (t_dist < self.radius):
         return(True)
@@ -110,22 +120,22 @@ When using `gui.draw()` with a list made of that instance, it should display as 
 
 # Part 2: union, intersection, difference classes
 
-In this part we will create classes that represent set operations between the shapes we just have created. Namely, we will design union, intersection and difference between two shapes `a` and `b` as specified:
+In this part we will create classes that represent set operations between the shapes we just have created. Namely, we will design union, intersection and difference between two shapes `shape_a` and `shape_b` as specified:
 
 **`UnionShape`**:
-- it will have as an attribute both input shapes `a` and `b`,
-- its `.f()` will compute the set union of `a.f()` and `b.()` : it will return true on points that belong to `a` or to `b`
-- and its color will be the average of color components of `a.color` and `b.color`.
+- it will have as an attribute both input shapes `shape_a` and `shape_b`,
+- its `.f()` will compute the set union of `shape_a.f()` and `shape_b.()` : it will return true on points that belong to `shape_a` or to `shape_b`
+- and its color will be the average of color components of `shape_a.color` and `shape_b.color`.
 
 **`IntersectionShape`**:
-- it will have as an attribute both input shapes `a` and `b`,
-- its `.f()` will compute the set intersection of `a.f()` and `b.()` : it will return true for points that belong both to `a` and to `b`
-- and its color will be the average of color components of `a.color` and `b.color`.
+- it will have as an attribute both input shapes `shape_a` and `shape_b`,
+- its `.f()` will compute the set intersection of `shape_a.f()` and `shape_b.()` : it will return true for points that belong both to `shape_a` and to `shape_b`
+- and its color will be the average of color components of `shape_a.color` and `shape_b.color`.
 
 **`DiffShape`**:
-- it will have as a attribute both input shapes `a` and `b`,
-- its `.f()` will compute the set difference between `a.f()` and `b.()` : it will return true on points that belong to `a` but not to `b`
-- and its color will be the color of a (`a.color`).
+- it will have as a attribute both input shapes `shape_a` and `shape_b`,
+- its `.f()` will compute the set difference between `shape_a.f()` and `shape_b.()` : it will return true on points that belong to `shape_a` but not to `shape_b`
+- and its color will be the color of a (`shape_a.color`).
 
 You will find the template for these three classes inside the file `operators.py`.
 
