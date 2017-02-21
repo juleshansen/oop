@@ -12,7 +12,7 @@ class Circle():
     cx      : {int} x coordinate of the center point
     cy      : {int} y coordinate of the center point
     radius  : {int} radius of the circle
-    color   : {tuple} or (r,g,b) coordinates
+    color   : {tuple} of (r,g,b) coordinates
     """
     def __init__(self, cx, cy, radius, color):
         """Constructs a Circle instance
@@ -54,7 +54,7 @@ class Rectangle():
     y0      : {int} y coordinate of the top-left point
     x1      : {int} x coordinate of the bottom-right point
     y1      : {int} y coordinate of the bottom-right point
-    color   : {tuple} or (r,g,b) coordinates
+    color   : {tuple} of (r,g,b) coordinates
     """
     def __init__(self, x0, y0, x1, y1, color):
         """Constructs a Rectangle instance
