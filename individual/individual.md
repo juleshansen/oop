@@ -17,12 +17,12 @@ We are going to develop a simple graphical interface to draw **visual shapes**. 
 
 A **shape** is defined as 1) some subspace of the screen and 2) a color.
 
-The subspace is defined by a caracteristic function `f` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as $f(x,y) \rightarrow \{True, False\}$.
+The subspace is defined by a characteristic function `f` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as $f(x,y) \rightarrow \{True, False\}$.
 
 The color is coded as a tuple of the form `(r,g,b)` that codes the rgb components each between 0 and 255.
 
 So, as a synthesis, in python we will define a **shape** by:
-- an **attribute** called `'color'` that is a tuple of the form `(r,g,b)` that codes the rgb components (between 0 and 255)
+- an **attribute** called `color` that is a tuple of the form `(r,g,b)` that codes the rgb components (between 0 and 255)
 - a **method** called `f`: takes two arguments `x` and `y` and tests if the point falls within the shape (returns True) or not (returns False).
 
 ### Playing with `Circle`
@@ -190,7 +190,7 @@ circle2,circle,150,100,50,0,0,255
 rectangle1,rectangle,10,50,100,200,255,0,255
 ```
 
-Each of these lines contains comma-separated values that code all the informations needed to create a shape. We start by circles and rectangles, providing values depending on the type of the shape:
+Each of these lines contains comma-separated values that code all the information needed to create a shape. We will start by parsing the lines for creating `Circle` and `Rectangle`, providing values depending on the type of the shape:
 
 | type | values |
 | :-: | :-- |
