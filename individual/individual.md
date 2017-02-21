@@ -89,7 +89,7 @@ circle1.cx = 300
 gui.draw(shapelist)
 ```
 
-What do you think will happen ? Will it display the same result as before ? A different one ? an error message ?
+What do you think will happen? Will it display the same result as before? A different one? an error message?
 
 ### Create another shape class `Rectangle`
 
@@ -215,7 +215,7 @@ it should display the image below.
 
 <details>
   <summary>**Hint/Spoiler Alert**: We would prefer you to try designing that class on your own, but if you feel lost at this point, **click on this** to see a list of steps you could take to design your code.</summary>
-- Decide what structure you would use as a register to store/remember shapes in `ShapeFactory` so that you can recall shapes by their `key` later ?<br/>
+- Decide what structure you would use as a register to store/remember shapes in `ShapeFactory` so that you can recall shapes by their `key` later?<br/>
 - Add some temporary code in `parse()` that just creates some test shapes like in **Part 1** (no parsing the file at all) and stores them in that register.<br/>
 - Implement method `draw()` to pull shapes from the register and draws them using `gui`.<br/>
 - Use the code above to test the general behavior of your register.<br/>
@@ -282,7 +282,7 @@ it should display the image below.
 
 <img src="img/gui_shapescript2.png" width=320/>
 
-3\. Use your function against file `'scripts/shapescript3.txt'`, what do you notice ?
+3\. Use your function against file `'scripts/shapescript3.txt'`, what do you notice?
 
 # Extra Credit
 
@@ -290,7 +290,7 @@ If you have finished this assignment early, here are a couple of interesting ide
 
 ## Idea 1: the "z" factor
 
-Look back at the result obtained in part 2.1 and part 3.2.2 (see images below). Where does this difference come from ? What changes should you make to your scripting languages (arguments) and to `ShapeFactory` so that these results are identical ?
+Look back at the result obtained in part 2.1 and part 3.2.2 (see images below). Where does this difference come from? What changes should you make to your scripting languages (arguments) and to `ShapeFactory` so that these results are identical?
 
 | result of part 2 | result of part 3 |
 | :-: | :-: |
@@ -310,4 +310,4 @@ Add those classes to your scripting language and have fun creating art of your o
 
 This idea is fairly simple: "implement transparency so that a shape can be more or less translucid and we can see through it". But the implementation requires some thinking and refactoring.
 
-Try to imagine how you would do that. In particular, which objects would you need to modify to implement that ? Would you need to modify `simplegui.py` ? How ?
+Try to imagine how you would do that. In particular, which objects would you need to modify to implement that? Would you need to modify `simplegui.py`? How?
