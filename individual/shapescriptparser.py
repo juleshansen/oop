@@ -19,17 +19,46 @@ class ShapeScriptParser():
     TBD
     """
     def __init__(self, gui):
-        """instanciates a shape factory, gui is provided for future drawing"""
+        """Instanciates the parser, gui is provided for drawing"""
         pass
 
-    def parse(self, filename):
-        """parses a file line by line"""
+    def parse(self, filepath):
+        """Parses a file line by line using parse_line().
+
+        Parameters
+        ----------
+        filename : {string} the path to the file
+
+        Returns
+        -------
+        None
+        """
         pass
 
-    def parse_line(self, string):
-        """parses one string (one line), and creates the corresponding object"""
+    def parse_line(self, line):
+        """Parses one line of the scripting language.
+        Creates the corresponding object.
+
+        Parameters
+        ----------
+        line    : {string} the line to parse
+
+        Returns
+        -------
+        None
+        """
         pass
 
     def draw(self):
-        """draws objects that have been created previously with parse()"""
+        """Draws objects that have been created previously
+        with parse() or parse_line().
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
+        """
         pass
