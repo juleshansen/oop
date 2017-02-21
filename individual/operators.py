@@ -2,36 +2,107 @@
 # -*- coding: utf-8 -*-
 
 class UnionShape():
-    def __init__(self, a, b):
-        """Constructs a UnionShape as union of given shapes a and b.
-        Note: color or union is average between colors of a and b."""
+    """The union of two shapes (as objects defined in shapes.py).
+
+    Parameters
+    ----------
+    shape_a   : {shape} shape object A.
+    shape_b   : {shape} shape object B.
+
+    Attributes
+    ----------
+    TBD
+    """
+    def __init__(self, shape_a, shape_b):
+        """Constructs a UnionShape as union of given shapes
+        shape_a and shape_b.
+
+        Note: color or union should be the average between
+        colors of shape_a and shape_b."""
         pass
 
     def f(self, x, y):
         """Characteristic function of the shape.
-        Returns True if (x,y) is inside the shape, else False."""
+        Returns True if (x,y) is inside the shape, else False.
+
+        Parameters
+        ----------
+        x : int, x coordinate of a pixel
+        y : int, y coordinate of a pixel
+
+        Returns
+        -------
+        boolean : True or False whether (x,y) is within the shape.
+        """
         pass
 
 
 class IntersectionShape():
-    def __init__(self, a, b):
-        """Constructs a IntersectionShape as union of given shapes a and b.
-        Note: color or intersection is average between colors of a and b."""
+    """The intersection of two shapes (as objects defined in shapes.py).
+
+    Parameters
+    ----------
+    shape_a   : {shape} shape object A.
+    shape_b   : {shape} shape object B.
+
+    Attributes
+    ----------
+    TBD
+    """
+    def __init__(self, shape_a, shape_b):
+        """Constructs a IntersectionShape as intersection
+        of given shapes shape_a and shape_b.
+
+        Note: color or intersection should be the average between
+        colors of shape_a and shape_b."""
         pass
 
     def f(self, x, y):
         """Characteristic function of the shape.
-        Returns True if (x,y) is inside the shape, else False."""
+        Returns True if (x,y) is inside the shape, else False.
+
+        Parameters
+        ----------
+        x : int, x coordinate of a pixel
+        y : int, y coordinate of a pixel
+
+        Returns
+        -------
+        boolean : True or False whether (x,y) is within the shape.
+        """
         pass
 
 
 class DiffShape():
-    def __init__(self, a, b):
-        """Constructs a DiffShape as union of given shapes a and b.
-        Note: color or difference is the color of a."""
+    """The difference of two shapes (as objects defined in shapes.py).
+
+    Parameters
+    ----------
+    shape_a   : {shape} shape object A.
+    shape_b   : {shape} shape object B.
+
+    Attributes
+    ----------
+    TBD
+    """
+    def __init__(self, shape_a, shape_b):
+        """Constructs a DiffShape as difference between two given shapes
+        shape_a and shape_b.
+        
+        Note: color or difference should be the color of shape_a."""
         pass
 
     def f(self, x, y):
         """Characteristic function of the shape.
-        Returns True if (x,y) is inside the shape, else False."""
+        Returns True if (x,y) is inside the shape, else False.
+
+        Parameters
+        ----------
+        x : int, x coordinate of a pixel
+        y : int, y coordinate of a pixel
+
+        Returns
+        -------
+        boolean : True or False whether (x,y) is within the shape.
+        """
         pass
