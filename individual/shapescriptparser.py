@@ -5,7 +5,7 @@ from shapes import Circle, Rectangle
 from operators import UnionShape, IntersectionShape, DiffShape
 from collections import OrderedDict
 
-class ShapeFactory():
+class ShapeScriptParser():
     def __init__(self, gui):
         """instanciates a shape factory, gui is provided for future drawing"""
         pass

@@ -201,10 +201,10 @@ Each of these lines contains comma-separated values that code all the informatio
 * `type` is `'circle'` for creating a `Circle`, `'rectangle'` for creating a `Rectangle`.
 
 
-2\. In `shapefactory.py` you'll find the template of a class `ShapeFactory` that will read such a file and create the corresponding shapes (for the moment only circles and rectangles). Use the docstrings in that file to implement the corresponding behavior. When executing it with the following code:
+2\. In `shapescriptparser.py` you'll find the template of a class `ShapeScriptParser` that will read such a file and create the corresponding shapes (for the moment only circles and rectangles). Use the docstrings in that file to implement the corresponding behavior. When executing it with the following code:
 
 ```
-sf = ShapeFactory(gui)
+sf = ShapeScriptParser(gui)
 sf.parse('scripts/shapescript1.txt')
 sf.draw()
 ```
@@ -215,7 +215,7 @@ it should display the image below.
 
 <details>
   <summary>**Hint/Spoiler Alert**: We would prefer you to try designing that class on your own, but if you feel lost at this point, **click on this** to see a list of steps you could take to design your code.</summary>
-- Decide what structure you would use as a register to store/remember shapes in `ShapeFactory` so that you can recall shapes by their `key` later?<br/>
+- Decide what structure you would use as a register to store/remember shapes in `ShapeScriptParser` so that you can recall shapes by their `key` later?<br/>
 - Add some temporary code in `parse()` that just creates some test shapes like in **Part 1** (no parsing the file at all) and stores them in that register.<br/>
 - Implement method `draw()` to pull shapes from the register and draws them using `gui`.<br/>
 - Use the code above to test the general behavior of your register.<br/>
@@ -270,10 +270,10 @@ Each of these lines contains comma-separated values that code all the informatio
 * `type` is `'union'` for creating a `UnionShape`, `'intersection'` for creating an `IntersectionShape`, and `'difference'` for creating a `DiffShape`.
 * `keyA` and `keyB` are the keys to the shapes, previously created, used as arguments to create this union/intersection/difference.
 
-2\. Modify `shapefactory.py` and its method `parse_line()` to take into account these three new types of classes. When executing it with the following code:
+2\. Modify `shapescriptparser.py` and its method `parse_line()` to take into account these three new types of classes. When executing it with the following code:
 
 ```
-sf = ShapeFactory(gui)
+sf = ShapeScriptParser(gui)
 sf.parse('scripts/shapescript2.txt')
 sf.draw()
 ```
@@ -290,13 +290,13 @@ If you have finished this assignment early, here are a couple of interesting ide
 
 ## Idea 1: the "z" factor
 
-Look back at the result obtained in part 2.1 and part 3.2.2 (see images below). Where does this difference come from? What changes should you make to your scripting languages (arguments) and to `ShapeFactory` so that these results are identical?
+Look back at the result obtained in part 2.1 and part 3.2.2 (see images below). Where does this difference come from? What changes should you make to your scripting languages (arguments) and to `ShapeScriptParser` so that these results are identical?
 
 | result of part 2 | result of part 3 |
 | :-: | :-: |
 | <img src="img/gui_draw_op12345678.png" width=320/> | <img src="img/gui_shapescript2.png" width=320/> |
 
-Create a script of your own to test that proposition, and modify `ShapeFactory` accordingly.
+Create a script of your own to test that proposition, and modify `ShapeScriptParser` accordingly.
 
 ## Idea 2: geometric transformations
 
