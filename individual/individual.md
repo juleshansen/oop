@@ -22,13 +22,13 @@ The subspace is defined by a caracteristic function `f` on the screen grid: you 
 The color is coded as a tuple of the form `(r,g,b)` that codes the rgb components each between 0 and 255.
 
 So, as a synthesis, in python we will define a **shape** by:
-- a member variable called `'color'` that is a tuple of the form `(r,g,b)` that codes the rgb components (between 0 and 255)
-- a member function called `f`: takes two arguments `x` and `y` and tests if the point falls within the shape (returns True) or not (returns False).
+- an **attribute** called `'color'` that is a tuple of the form `(r,g,b)` that codes the rgb components (between 0 and 255)
+- a **method** called `f`: takes two arguments `x` and `y` and tests if the point falls within the shape (returns True) or not (returns False).
 
 ### Playing with `Circle`
 
 1\. In a text editor, open file `shape.py` and look at the example class `Circle`. As you can
-see from the `__init__()` constructor method, a circle has four **member variables**. We will find the member variable :
+see from the `__init__()` constructor method, a circle has four **attributes**. We will find the attribute :
 - `color`: an `(r,g,b)` tuple as specified above.
 
 And add three other:
@@ -36,7 +36,7 @@ And add three other:
 - `cy`: the x coordinate of the center of the circle
 - `radius`: the radius of the circle
 
-Those are used in the `.f()` member function to determine if points `(x,y)` is in or out this circle. Check the content of `.f()` and identify where those member variables are used.
+Those attributes are used in the `.f()` method to determine if points `(x,y)` is in or out this circle. Check the content of `.f()` and identify where those attributes are used.
 
 2\. In **`ipython`**, import class `Circle` from module `shapes`. Create an instance `circle1` centered on (100,100) with radius 50 and color (255, 0, 0). Type `circle1` in `ipython` to display the content of `circle1`, you should see something like:
 
@@ -102,17 +102,17 @@ When using `gui.draw()` with a list made of that instance, it should display as 
 In this part we will create classes that represent set operations between the shapes we just have created. Namely, we will design union, intersection and difference between two shapes `a` and `b` as specified:
 
 **`UnionShape`**:
-- it will have as a member both input shapes `a` and `b`,
+- it will have as an attribute both input shapes `a` and `b`,
 - its `.f()` will compute the set union of `a.f()` and `b.()` : it will return true on points that belong to `a` or to `b`
 - and its color will be the average of color components of `a.color` and `b.color`.
 
 **`IntersectionShape`**:
-- it will have as a member both input shapes `a` and `b`,
+- it will have as an attribute both input shapes `a` and `b`,
 - its `.f()` will compute the set intersection of `a.f()` and `b.()` : it will return true for points that belong both to `a` and to `b`
 - and its color will be the average of color components of `a.color` and `b.color`.
 
 **`DiffShape`**:
-- it will have as a member both input shapes `a` and `b`,
+- it will have as a attribute both input shapes `a` and `b`,
 - its `.f()` will compute the set difference between `a.f()` and `b.()` : it will return true on points that belong to `a` but not to `b`
 - and its color will be the color of a (`a.color`).
 
