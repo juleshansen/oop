@@ -32,8 +32,8 @@ see from the `__init__()` constructor method, a circle has four **attributes**. 
 - `color`: an `(r,g,b)` tuple as specified above.
 
 And add three other:
-- `cx`: the x coordinate of the center of the circle
-- `cy`: the x coordinate of the center of the circle
+- `cx`: the first coordinate of the center of the circle
+- `cy`: the second coordinate of the center of the circle
 - `radius`: the radius of the circle
 
 Those attributes are used in the `.f()` method to determine if points `(x,y)` is in or out this circle. Check the content of `.f()` and identify where those attributes are used.
@@ -56,7 +56,7 @@ the last value starting with `0x` should be different. It corresponds to the ind
 
 5\. We are now going to draw `circle1`. Create an empty `list` that you call `shapelist` and put `circle1` into that list. Use `gui.draw()` to draw `shapelist`. It should display as below.
 
-**Note**: `x` and `y` are defined as coordinates of pixels on a computer screen. Then x increase from left to right, and y increase from top to bottom.
+**Note**: `x` and `y` are defined as coordinates of pixels on a computer screen. Then `x` increase from left to right, and `y` increase from top to bottom.
 
 <img src="img/gui_draw_circle1.png" width=320/>
 
