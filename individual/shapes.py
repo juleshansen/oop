@@ -29,12 +29,12 @@ class Circle():
 
         Parameters
         ----------
-        x : int, x coordinate of a pixel
-        y : int, y coordinate of a pixel
+        x : {int} x coordinate of a pixel
+        y : {int} y coordinate of a pixel
 
         Returns
         -------
-        boolean : True or False whether (x,y) is within the shape.
+        bool : True or False whether (x,y) is within the shape.
         """
         t_dist = math.sqrt((x - self.cx)**2 + (y - self.cy)**2)
         if (t_dist < self.radius):
@@ -68,11 +68,11 @@ class Rectangle():
 
         Parameters
         ----------
-        x : int, x coordinate of a pixel
-        y : int, y coordinate of a pixel
+        x : {int} x coordinate of a pixel
+        y : {int} y coordinate of a pixel
 
         Returns
         -------
-        boolean : True or False whether (x,y) is within the shape.
+        bool : True or False whether (x,y) is within the shape.
         """
         pass

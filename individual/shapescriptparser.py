@@ -28,7 +28,7 @@ class ShapeScriptParser():
 
         Parameters
         ----------
-        filename : {string} the path to the file
+        filename : {str} the path to the file
 
         Returns
         -------
@@ -42,7 +42,7 @@ class ShapeScriptParser():
 
         Parameters
         ----------
-        line    : {string} the line to parse
+        line    : {str} the line to parse
 
         Returns
         -------

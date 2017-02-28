@@ -18,12 +18,12 @@ class SimpleGUI():
 
     Attributes
     ----------
-    width  : int, the width of the image generated
+    width  : {int} the width of the image generated
         and the maximum value for x coordinates of pixels.
-    height : int, the height of the image generated
+    height : {int} the height of the image generated
         and the maximum value for y coordinates of pixels.
     pixels : the matrix of colors for each pixel (to generate img)
-    img    : PIL.Image, the image generated for display.
+    img    : {PIL.Image} the image generated for display.
     """
     def __init__(self):
         self.width = 640
@@ -88,13 +88,13 @@ class SimpleGUI():
                 self.pixels[i,j] = (i % 255, j % 255, 128)
         self.show()
 
-    def draw(self, shapelist):
+    def draw(self, shape_list):
         """Draw a list of shapes as defined in module shapes.py
         and show() the result.
 
         Parameters
         ----------
-        shapelist: a {list} of shapes
+        shape_list : a {list} of shapes
 
         Returns
         -------
@@ -107,7 +107,7 @@ class SimpleGUI():
         for i in xrange(self.width):
             for j in xrange(self.height):
                 # if we are in one of the areas in the list
-                for o in shapelist:
+                for o in shape_list:
                     if o.f(i,j):
                         # drop a pixel in there, using color of the area
                         self.pixels[i,j] = o.color
