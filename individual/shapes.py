@@ -23,7 +23,7 @@ class Circle():
         self.radius = radius
         self.color = color
 
-    def f(self, x, y):
+    def mu(self, x, y):
         """Characteristic function of the shape.
         Returns True if (x,y) is inside the shape, else False.
 
@@ -37,10 +37,7 @@ class Circle():
         bool : True or False whether (x,y) is within the shape.
         """
         t_dist = math.sqrt((x - self.cx)**2 + (y - self.cy)**2)
-        if (t_dist < self.radius):
-            return(True)
-        else:
-            return(False)
+        return (t_dist < self.radius)
 
 
 class Rectangle():
@@ -62,7 +59,7 @@ class Rectangle():
         """
         pass
 
-    def f(self, x, y):
+    def mu(self, x, y):
         """Characteristic function of the shape.
         Returns True if (x,y) is inside the shape, else False.
 

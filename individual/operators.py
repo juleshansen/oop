@@ -22,7 +22,7 @@ class UnionShape():
         """
         pass
 
-    def f(self, x, y):
+    def mu(self, x, y):
         """Characteristic function of the shape.
         Returns True if (x,y) is inside the shape, else False.
 
@@ -59,7 +59,7 @@ class IntersectionShape():
         """
         pass
 
-    def f(self, x, y):
+    def mu(self, x, y):
         """Characteristic function of the shape.
         Returns True if (x,y) is inside the shape, else False.
 
@@ -95,7 +95,7 @@ class DiffShape():
         """
         pass
 
-    def f(self, x, y):
+    def mu(self, x, y):
         """Characteristic function of the shape.
         Returns True if (x,y) is inside the shape, else False.
 

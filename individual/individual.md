@@ -17,13 +17,13 @@ We are going to develop a simple graphical interface to draw **visual shapes**. 
 
 Conceptually, a **shape** is defined as 1) some subspace of the screen and 2) a color.
 
-The subspace is defined by a characteristic function `f` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as $f(x,y) \rightarrow \{True, False\}$.
+The subspace is defined by a characteristic function `mu` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as $\mu(x,y) \rightarrow \{True, False\}$.
 
 The color is coded as a tuple of the form `(r,g,b)` that codes the rgb components each between 0 and 255.
 
 So, as a synthesis, in python we will define a **shape** by:
 - an **attribute** called `color` that is a tuple of the form `(r,g,b)` that codes the rgb components (between 0 and 255)
-- a **method** called `f`: takes two arguments `x` and `y` and tests if the point falls within the shape (returns True) or not (returns False).
+- a **method** called `mu`: takes two arguments `x` and `y` and tests if the point falls within the shape (returns True) or not (returns False).
 
 The reasons why we choose to design those shapes as classes are:
 - a shape object would contain everything needed to draw a shape ([https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)](encapsulation))
@@ -42,10 +42,10 @@ And add three other:
 - `cy`: the second coordinate of the center of the circle
 - `radius`: the radius of the circle
 
-Those attributes are used in the `.f()` method to determine if points `(x,y)` is in or out this circle. Below, you'll find the code of that method `.f()` of class `Circle`. Identify where `self.cx`,  `self.cy` and `self.radius` are used, and how this is used to produce a circle centered on coordinated `(cx,cy)` with the given `radius`.
+Those attributes are used in the `.mu()` method to determine if points `(x,y)` is in or out this circle. Below, you'll find the code of that method `.mu()` of class `Circle`. Identify where `self.cx`,  `self.cy` and `self.radius` are used, and how this is used to produce a circle centered on coordinated `(cx,cy)` with the given `radius`.
 
 ```python
-def f(self, x, y):
+def mu(self, x, y):
     """Characteristic function of the shape.
     Returns True if (x,y) is inside the shape, else False.
 
@@ -59,10 +59,7 @@ def f(self, x, y):
     boolean : True or False whether (x,y) is within the shape.
     """
     t_dist = math.sqrt((x - self.cx)**2 + (y - self.cy)**2)
-    if (t_dist < self.radius):
-        return(True)
-    else:
-        return(False)
+    return (t_dist < self.radius)
 ```
 
 2\. In **`ipython`**, import class `Circle` from module `shapes`. Create an instance `circle1` centered on (100,100) with radius 50 and color (255, 0, 0). Type `circle1` in `ipython` to display the content of `circle1`, you should see something like:
@@ -73,7 +70,7 @@ def f(self, x, y):
 
 the last value starting with `0x` should be different. It corresponds to the index of your instance in memory.
 
-3\. Use method `.f()` of `circle1` to check if points at coordinates `(0,0)`, `(100,70)`, `(300,20)` are in or out `circle1`
+3\. Use method `.mu()` of `circle1` to check if points at coordinates `(0,0)`, `(100,70)`, `(300,20)` are in or out `circle1`
 
 ### Testing the `gui`
 
@@ -91,8 +88,8 @@ the last value starting with `0x` should be different. It corresponds to the ind
 
 6\. Create two new instances of `Circle` with the following parameters:
 
-- instance `circle2`: centered on (200,100) with radius 70 and color (0, 255, 0)
-- instance `circle3`: centered on (100,200) with radius 10 and color (0, 0, 255)
+- instance `circle2`: centered on (200, 100) with radius 70 and color (0, 255, 0)
+- instance `circle3`: centered on (100, 200) with radius 10 and color (0, 0, 255)
 
 Add those two instances to `shapelist` and use `gui.draw()` to display the result. It should display as below.
 
@@ -111,7 +108,7 @@ What do you think will happen? Will it display the same result as before? A diff
 
 **In file `shapes.py` you will find a template for a new class `Rectangle`.**
 
-8\. Use the template to code a `Rectangle` class, as defined by four coordinates `x0,y0,x1,y1` that form the upper left corner (`x0,y0`) and the lower right corner (`x1,y1`) of the rectangle, plus a `color`, as long as function `.f()` returning True inside the rectangle and False outside.
+8\. Use the template to code a `Rectangle` class, as defined by four coordinates `x0,y0,x1,y1` that form the upper left corner (`x0,y0`) and the lower right corner (`x1,y1`) of the rectangle, plus a `color`, as long as function `.mu()` returning True inside the rectangle and False outside.
 
 9\. Test your `Rectangle` class by creating an instance with the following parameters:
 - `x0 = 10`
@@ -130,17 +127,17 @@ In this part we will create classes that represent set operations between the sh
 
 **`UnionShape`**:
 - it will have as an attribute both input shapes `shape_a` and `shape_b`,
-- its `.f()` will compute the set union of `shape_a.f()` and `shape_b.()` : it will return true on points that belong to `shape_a` or to `shape_b`
+- its `.mu()` will compute the set union of `shape_a.mu()` and `shape_b.mu()` : it will return true on points that belong to `shape_a` or to `shape_b`
 - and its color will be the average of color components of `shape_a.color` and `shape_b.color`.
 
 **`IntersectionShape`**:
 - it will have as an attribute both input shapes `shape_a` and `shape_b`,
-- its `.f()` will compute the set intersection of `shape_a.f()` and `shape_b.()` : it will return true for points that belong both to `shape_a` and to `shape_b`
+- its `.mu()` will compute the set intersection of `shape_a.mu()` and `shape_b.mu()` : it will return true for points that belong both to `shape_a` and to `shape_b`
 - and its color will be the average of color components of `shape_a.color` and `shape_b.color`.
 
 **`DiffShape`**:
 - it will have as a attribute both input shapes `shape_a` and `shape_b`,
-- its `.f()` will compute the set difference between `shape_a.f()` and `shape_b.()` : it will return true on points that belong to `shape_a` but not to `shape_b`
+- its `.mu()` will compute the set difference between `shape_a.mu()` and `shape_b.mu()` : it will return true on points that belong to `shape_a` but not to `shape_b`
 - and its color will be the color of a (`shape_a.color`).
 
 You will find the template for these three classes inside the file `operators.py`.
@@ -318,7 +315,7 @@ Create a script of your own to test that proposition, and modify `ShapeScriptPar
 
 Design three other classes `Translation`, `Scaling` and `Rotation` that implement these respective mathematical operations.
 
-Each would be constructed by taking one input shape, and transforming it according to given parameters. For instance, for `Translation`, use two values `xshirt` and `yshift` indicating the vector for translating.
+Each would be constructed by taking one input shape, and transforming it according to given parameters. For instance, for `Translation`, use two values `xshift` and `yshift` indicating the vector for translating.
 
 Add those classes to your scripting language and have fun creating art of your own !
 

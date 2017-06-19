@@ -10,7 +10,7 @@ class SimpleGUI():
     shapes using their characteristic function.
 
     Each shape is represented by a class with a color and a characteristic
-    function (method) f(). For displaying shapes, this class
+    function (method) mu(). For displaying shapes, this class
 
     Parameters
     ----------
@@ -108,7 +108,7 @@ class SimpleGUI():
             for j in xrange(self.height):
                 # if we are in one of the areas in the list
                 for o in shape_list:
-                    if o.f(i,j):
+                    if o.mu(i,j):
                         # drop a pixel in there, using color of the area
                         self.pixels[i,j] = o.color
 
