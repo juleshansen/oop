@@ -26,8 +26,8 @@ So, as a synthesis, in python we will define a **shape** by:
 - a **method** called `mu`: takes two arguments `x` and `y` and tests if the point falls within the shape (returns True) or not (returns False).
 
 The reasons why we choose to design those shapes as classes are:
-- a shape object would contain everything needed to draw a shape ([encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
-- every shape, whether it is a circle, a rectangle, or something more complex, would fall into a unique template ([Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)))
+- a shape object would contain everything needed to draw a shape ([encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)))
+- every shape, whether it is a circle, a rectangle, or something more complex, would fall into a unique template ([polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)))
 - one can design a mechanism to draw, to generate, to process shapes without having to know how they work internally (encapsulation + [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns))
 
 
