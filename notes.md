@@ -196,7 +196,7 @@ You can of course modify the output however you'd like, putting a space or symbo
 
 This gives an output like this: `|A|d|`.
 
-***For a full list of magic methods, take a look at [this blog post](http://www.rafekettler.com/magicmethods.html).***
+***For a full list of magic methods, take a look at [this post](https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.markdown).***
 
 #### Card and Deck implementations
 
