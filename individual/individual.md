@@ -17,7 +17,7 @@ We are going to develop a simple graphical interface to draw **visual shapes**. 
 
 Conceptually, a **shape** is defined as 1) some subspace of the screen and 2) a color.
 
-The subspace is defined by a characteristic function `mu` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as ![](img/formula_1.png).
+The subspace is defined by a characteristic function `mu` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as <img src="img/formula_1.png" height="50" />.
 
 The color is coded as a tuple of the form `(r,g,b)` that codes the rgb components each between 0 and 255.
 
