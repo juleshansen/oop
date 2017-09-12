@@ -12,9 +12,14 @@ class Card(object):
     def __repr__(self):
         return "%s%s" % (self.number, self.suit)
 
-    def __cmp__(self, other):
-        return cmp(self.value_dict[self.number], self.value_dict[other.number])
+    def __gt__(self, other):
+      return self.value_dict[self.number] > self.value_dict[other.number]
 
+    def __lt__(self, other):
+      return self.value_dict[self.number] < self.value_dict[other.number]
+
+    def __eq__(self, other):
+      return self.value_dict[self.number] == self.value_dict[other.number]
 
 class Deck(object):
     def __init__(self):
@@ -38,4 +43,3 @@ class Deck(object):
 
     def isempty(self):
         return self.cards == []
-
