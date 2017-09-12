@@ -21,6 +21,7 @@ class Card(object):
     def __eq__(self, other):
       return self.value_dict[self.number] == self.value_dict[other.number]
 
+
 class Deck(object):
     def __init__(self):
         self.cards = []

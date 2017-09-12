@@ -51,7 +51,7 @@ Before you write any code, you should make a plan of what classes and methods yo
 
 As you write your code, you should write test code along side it. Take a look at the example test files for ideas on how to do this.
 
-You should be able to play the game on the command line, by typing in your moves. You can use python's `input` and `raw_input` functions for this.
+You should be able to play the game on the command line, by typing in your moves. You can use python's `input` and function for this.
 
 
 ## What to Submit
