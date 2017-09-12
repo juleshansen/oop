@@ -63,11 +63,11 @@ class SimpleGUI():
         self.img = Image.new( 'RGB', (self.width, self.height), "white" )
         self.pixels = self.img.load()
         # horizontal borders
-        for i in xrange(self.width):
+        for i in range(self.width):
             self.pixels[i,0] = (0, 0, 0)
             self.pixels[i,self.height-1] = (0, 0, 0)
         # vertical borders
-        for j in xrange(self.height):
+        for j in range(self.height):
             self.pixels[0,j] = (0, 0, 0)
             self.pixels[self.width-1,j] = (0, 0, 0)
 
@@ -83,8 +83,8 @@ class SimpleGUI():
         None
         """
         self.clear()
-        for i in xrange(self.width):
-            for j in xrange(self.height):
+        for i in range(self.width):
+            for j in range(self.height):
                 self.pixels[i,j] = (i % 255, j % 255, 128)
         self.show()
 
@@ -104,8 +104,8 @@ class SimpleGUI():
         self.clear()
 
         # checks for every pixel in the image
-        for i in xrange(self.width):
-            for j in xrange(self.height):
+        for i in range(self.width):
+            for j in range(self.height):
                 # if we are in one of the areas in the list
                 for o in shape_list:
                     if o.mu(i,j):
