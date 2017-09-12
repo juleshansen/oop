@@ -14,7 +14,7 @@ class War(object):
 
     def create_player(self, title):
         if self.human:
-            name = raw_input("Enter %s's name: " % title)
+            name = input("Enter %s's name: " % title)
         else:
             name = title
         return Player(name)
@@ -42,7 +42,7 @@ class War(object):
 
     def draw_cards(self, player, other_player, n):
         cards = []
-        for i in xrange(n):
+        for i in range(n):
             card = self.draw_card(player, other_player)
             if not card:
                 return cards
@@ -78,31 +78,31 @@ class War(object):
 
     def pause(self):
         if self.human:
-            raw_input("")
+            input("")
 
     def cards_to_str(self, cards):
         return " ".join(str(card) for card in cards)
 
     def display_play(self, card1, card2):
         if self.human:
-            print "%s plays %s" % (self.player1.name, str(card1))
-            print "%s plays %s" % (self.player2.name, str(card2))
+            print("%s plays %s" % (self.player1.name, str(card1)))
+            print("%s plays %s" % (self.player2.name, str(card2)))
 
     def display_receive(self, player):
         if self.human:
             self.pot.sort(reverse=True)
             pot_str = self.cards_to_str(self.pot)
-            print "%s receives the cards: %s" % (player.name, pot_str)
+            print("%s receives the cards: %s" % (player.name, pot_str))
 
     def display_war(self, cards1, cards2):
         if self.human:
-            print "WAR!"
-            print "%s plays %s" % (self.player1.name, self.cards_to_str(cards1))
-            print "%s plays %s" % (self.player2.name, self.cards_to_str(cards2))
+            print("WAR!")
+            print("%s plays %s" % (self.player1.name, self.cards_to_str(cards1)))
+            print("%s plays %s" % (self.player2.name, self.cards_to_str(cards2)))
 
     def display_winner(self):
         if self.human:
-            print "The winner is %s!!!" % self.winner
+            print("The winner is %s!!!" % self.winner)
 
 
 if __name__ == '__main__':
