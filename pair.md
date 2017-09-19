@@ -8,7 +8,7 @@ Take a look at the code for the game war in [war.py](src/war.py) and [war_player
   Joe has 40 cards and Ann has 12 cards.
   ```
 
-  Only do this when the pot is empty, so the values should always add up to 52.
+  Only do this when the pot is empty (after the pot has been distributed to the winner), so the values should always add up to 52.
 
   There are tests in test_war.py that fail. Modify war.py to make them pass.
 
