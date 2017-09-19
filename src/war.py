@@ -1,6 +1,6 @@
 from deck import Deck
 from war_player import Player
-
+import sys
 
 class War(object):
     def __init__(self, human=True):
@@ -14,7 +14,8 @@ class War(object):
 
     def create_player(self, title):
         if self.human:
-            name = input("Enter %s's name: " % title)
+            msg = "Enter %s's name: " % title
+            name = raw_input(msg) if sys.version_info[0] < 3 else input(msg)
         else:
             name = title
         return Player(name)
@@ -78,7 +79,8 @@ class War(object):
 
     def pause(self):
         if self.human:
-            input("")
+            msg = "[Pause] - Press enter to continue."
+            raw_input(msg) if sys.version_info[0] < 3 else input(msg)
 
     def cards_to_str(self, cards):
         return " ".join(str(card) for card in cards)
