@@ -2,6 +2,12 @@
 
 You can choose to work on this assignment in any environment. We recommend you choose an interactive environment for executing commands and a text editor on the side for implementing classes.
 
+You may need to install the python imaging library for the gui code to work.  To do this, run the following command in conda
+
+```
+conda install -n <environment to install into> pillow
+```
+
 Whether you're executing commands from **IPython** or **notebook**, you should first set the autoreload mode for imports. Use the following lines once at the beginning:
 
 ```python
