@@ -10,7 +10,7 @@ conda install pillow
 
 If you need to install into a different python environment, type
 ```
-conda install -n <environment to install into>
+conda install -n <environment to install into> pillow
 ```
 
 Whether you're executing commands from **IPython** or **notebook**, you should first set the autoreload mode for imports. Use the following lines once at the beginning:
