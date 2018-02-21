@@ -5,7 +5,12 @@ You can choose to work on this assignment in any environment. We recommend you c
 You may need to install the python imaging library for the gui code to work.  To do this, run the following command in conda
 
 ```
-conda install -n <environment to install into> pillow
+conda install pillow
+```
+
+If you need to install into a different python environment, type
+```
+-n <environment to install into>
 ```
 
 Whether you're executing commands from **IPython** or **notebook**, you should first set the autoreload mode for imports. Use the following lines once at the beginning:
