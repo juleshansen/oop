@@ -12,11 +12,12 @@ This assignment is [here](gui).
 
 ## Cards
 
-Implement a some classic card games (War and Blackjack).
+As an assignment to expand on an implementation of the card game War, and then modify the existing versions of `Player` and `Deck` classes to write your own Blackjack game.
 
-This assignment is [here](gui).
+This assignment is [here](cards).
 
 ## Polynomial
 
 Implement a class for representing polynomial objects.  The class will support common mathematical operations on polynomials (addition, subtraction, multiplication, and evaluation) in addition to printing and display.
 
+This assignment is [here](polynomial).
