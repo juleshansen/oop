@@ -7,7 +7,9 @@ In this short project, you will build a class for manipulating polynomial object
 A *polynomial* is an expression of a single variable consisting of the sum of one or more *terms*. Each term is a non-negative integer power of a variable times some constant coefficient. For example
 
 ![Quadratic Polynomial](images/poly1.gif)
+
 ![Cubic Polynomial, no constant term](images/poly2.gif)
+
 ![Constant Polynomial](images/poly1.gif)
 
 The largest power of the variable appearing in a polynomial is called its *degree*. Note that even though the last example does not include any terms with the variable, we still count it as a degree zero polynomial.
