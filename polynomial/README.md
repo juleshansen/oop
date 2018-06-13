@@ -26,7 +26,7 @@ Your class will need to store the coefficients. Talk with your partner about wha
 
 ## Part 1: Starting your class
 
-Create a Polynomial class with two methods: `__init__` and `__repr__`. The first should allow you to initialize a new Polynomial object with a list, so `Polynomial([3,2,1]) creates the equivalent of $ x^2 + 2x + 3 $. The second should convert it to a string that could be used to create that same object, so `Polynomial([3,2,1]).__repr__()` will return the string `"Polynomial([3,2,1])"`.
+Create a Polynomial class with two methods: `__init__` and `__repr__`. The first should allow you to initialize a new Polynomial object with a list, so `Polynomial([3,2,1])` creates the equivalent of $ x^2 + 2x + 3 $. The second should convert it to a string that could be used to create that same object, so `Polynomial([3,2,1]).__repr__()` will return the string `"Polynomial([3,2,1])"`.
 
 We've suggested you enter the coefficients with the lowest-exponent terms first. Discuss with your partner whether this is the best choice.
 
