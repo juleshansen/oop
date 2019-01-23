@@ -76,7 +76,7 @@ def mu(self, x, y):
 2\. In **`ipython`**, import class `Circle` from module `shapes`. Create an instance `circle1` centered on (100,100) with radius 50 and color (255, 0, 0). Type `circle1` in `ipython` to display the content of `circle1`, you should see something like:
 
 ```
-<areas.Circle instance at 0x103f61cb0>
+<shapes.Circle instance at 0x103f61cb0>
 ```
 
 the last value starting with `0x` should be different. It corresponds to the index of your instance in memory.
