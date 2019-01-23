@@ -27,6 +27,8 @@ plt.ion()
 
 In a notebook, use `%matplotlib inline` to display images into your notebook rather than in a separate window.
 
+If matplotlib is giving you a terrible error message about backends, IGNORE what it tells you to do. Instead, just reinstall it with `conda install matplotlib` and that should take care of all the dependencies.
+
 # Part 1: drawing instances of visual shape classes
 
 We are going to develop a simple graphical interface to draw **visual shapes**. To begin, you will have to create different **shapes** that all fit into a common class description. Your shapes will be drawn on the screen using an existing class we will provide, called `SimpleGUI`.
