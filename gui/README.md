@@ -2,7 +2,7 @@
 
 You can choose to work on this assignment in any environment. We recommend you choose an interactive environment for executing commands and a text editor on the side for implementing classes.
 
-You may need to install the python imaging library for the gui code to work.  To do this, run the following command in conda
+You may need to install the python imaging library for the gui code to work. To do this, run the following command in conda
 
 ```
 conda install pillow
@@ -13,13 +13,7 @@ If you need to install into a different python environment, type
 conda install -n <environment to install into> pillow
 ```
 
-Whether you're executing commands from **IPython** or **notebook**, you should first set the autoreload mode for imports. Use the following lines once at the beginning:
-
-```python
-%load_ext autoreload
-%autoreload 2
-```
-If you're in an ipython terminal, you must execute the following commands to keep figures from freezing your terminal:
+If you're in an ipython terminal, you must execute the following to allow you to enter commands while a figure window is open:
 ```python
 import matplotlib.pyplot as plt
 plt.ion()
@@ -28,6 +22,13 @@ plt.ion()
 In a notebook, use `%matplotlib inline` to display images into your notebook rather than in a separate window.
 
 If matplotlib is giving you a terrible error message about backends, IGNORE what it tells you to do. Instead, just reinstall it with `conda install matplotlib` and that should take care of all the dependencies.
+
+Whether you're executing commands from **IPython** or **notebook**, you should first set the autoreload mode for imports. Use the following lines once at the beginning:
+
+```python
+%load_ext autoreload
+%autoreload 2
+```
 
 # Part 1: drawing instances of visual shape classes
 
