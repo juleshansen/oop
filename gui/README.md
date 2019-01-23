@@ -19,8 +19,13 @@ Whether you're executing commands from **IPython** or **notebook**, you should f
 %load_ext autoreload
 %autoreload 2
 ```
+If you're in an ipython terminal, you must execute the following commands to keep figures from freezing your terminal:
+```python
+import matplotlib.pyplot as plt
+plt.ion()
+```
 
-In notebook, use `%matplotlib inline` to display images into your notebook rather than in a separate window.
+In a notebook, use `%matplotlib inline` to display images into your notebook rather than in a separate window.
 
 # Part 1: drawing instances of visual shape classes
 
