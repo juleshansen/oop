@@ -36,7 +36,7 @@ We are going to develop a simple graphical interface to draw **visual shapes**. 
 
 Conceptually, a **shape** is defined as 1) some subspace of the screen and 2) a color.
 
-The subspace is defined by a characteristic function `mu` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as <img src="img/formula_1.png" height="30" />.
+The subspace is defined by a characteristic function `mu` on the screen grid: you can be either inside that surface or outside. Mathematically, this function would be defined as <img src="images/formula_1.png" height="30" />.
 
 The color is coded as a tuple of the form `(r,g,b)` that codes the rgb components each between 0 and 255.
 
@@ -95,13 +95,13 @@ the last value starting with `0x` should be different. It corresponds to the ind
 
 4\. We will now test our drawing engine. Import class `SimpleGUI` from the provided module `simplegui`. Create an instance of that class called `gui`. Use method `gui.test()` to test your instance. It should display the image below (in a separate window or within your notebook).
 
-<img src="img/gui_test.png" width=320/>
+<img src="images/gui_test.png" width=320/>
 
 5\. We are now going to draw `circle1`. Create an empty `list` that you call `shapelist` and put `circle1` into that list. Use `gui.draw()` to draw `shapelist`. It should display as below.
 
 **Note**: `x` and `y` are defined as coordinates of pixels on a computer screen. Then `x` increase from left to right, and `y` increase from top to bottom.
 
-<img src="img/gui_draw_circle1.png" width=320/>
+<img src="images/gui_draw_circle1.png" width=320/>
 
 ### Creating instances of the `Circle` class
 
@@ -112,7 +112,7 @@ the last value starting with `0x` should be different. It corresponds to the ind
 
 Add those two instances to `shapelist` and use `gui.draw()` to display the result. It should display as below.
 
-<img src="img/gui_draw_circle123.png" width=320/>
+<img src="images/gui_draw_circle123.png" width=320/>
 
 7\. Now, if you execute the following lines:
 
@@ -138,7 +138,7 @@ What do you think will happen? Will it display the same result as before? A diff
 
 When using `gui.draw()` with a list made of that instance, it should display as below:
 
-<img src="img/gui_draw_rect1.png" width=320/>
+<img src="images/gui_draw_rect1.png" width=320/>
 
 # Part 2: union, intersection, difference classes
 
@@ -188,7 +188,7 @@ gui.draw(shapelist)
 
 It should display the following result:
 
-<img src="img/gui_draw_circle12345678.png" width=320/>
+<img src="images/gui_draw_circle12345678.png" width=320/>
 
 You can test your implementation of UnionShape, IntersectionShape and DiffShape using the following segment:
 
@@ -205,7 +205,7 @@ gui.draw(shapelist)
 
 With `circle1,...,circle8` defined previously, you should expect the following result:
 
-<img src="img/gui_draw_op12345678.png" width=320/>
+<img src="images/gui_draw_op12345678.png" width=320/>
 
 # Part 3: creating shape scripts with a shape factory
 
@@ -243,7 +243,7 @@ sf.draw()
 
 it should display the image below.
 
-<img src="img/gui_shapescript1.png" width=320/>
+<img src="images/gui_shapescript1.png" width=320/>
 
 <details>
   <summary>**Hint/Spoiler Alert**: We would prefer you to try designing that class on your own, but if you feel lost at this point, **click on this** to see a list of steps you could take to design your code.</summary>
@@ -312,7 +312,7 @@ sf.draw()
 
 it should display the image below.
 
-<img src="img/gui_shapescript2.png" width=320/>
+<img src="images/gui_shapescript2.png" width=320/>
 
 3\. Use your function against file `'scripts/shapescript3.txt'`, what do you notice?
 
@@ -326,7 +326,7 @@ Look back at the result obtained in part 2.1 and part 3.2.2 (see images below). 
 
 | result of part 2 | result of part 3 |
 | :-: | :-: |
-| <img src="img/gui_draw_op12345678.png" width=320/> | <img src="img/gui_shapescript2.png" width=320/> |
+| <img src="images/gui_draw_op12345678.png" width=320/> | <img src="images/gui_shapescript2.png" width=320/> |
 
 Create a script of your own to test that proposition, and modify `ShapeScriptParser` accordingly.
 
