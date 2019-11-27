@@ -1,11 +1,11 @@
 # OOP
 
 Object Oriented programming is a common design pattern in modern computer languages.  In Python 
-classes are used to define objects, so it's important that you understand how to create classes
-and objects.
+classes are used to define objects, so it's important that you understand class syntax
+and how to create (instantiate) objects using your class definitions.
 
-Your [assignment](./assignment.md) is to create a polynomial class so that you can make polynomial objects
-and perform operations on them.  Do the assignment as a pair.
+Your [assignment](./assignment.md) is to create a polynomial class so that you 
+can make polynomial objects and perform operations on them.  Do the assignment as a pair.
 
 ## Standards
 <ol>
