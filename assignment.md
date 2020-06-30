@@ -40,6 +40,16 @@ Add an `evaluate` method to your class that takes a single number, so `Polynomia
 
 Add methods `__add__`, `__sub__`, and `__neg__`. Test out that they give you the expected results.
 
+Example:
+```
+>> Polynomial([3,2,1]).__add__(Polynomial([3,2,1]))
+Polynomial([6,4,2])
+```
+Which is the same as:
+```
+>> Polynomial([3,2,1]) + Polynomial([3,2,1])
+Polynomial([6,4,2])
+```
 ### Part 4: Equality
 
 Add an `__eq__` method that takes in two `Polynomial` objects, and returns `True` or `False`. It should return `True` for `Polynomial([1,0]) == Polynomial([1])`, and `False` for `Polynomial([0, 1]) == Polynomial([1])`
