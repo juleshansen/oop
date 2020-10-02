@@ -25,9 +25,16 @@ on Khan Academy describing the concept.
 The derivate of a polynomial is the sum of the derivate of each of its terms.  Algorithmically,
 you can determine it like this:
 
-<img src="./images/derivative_polynomial.png" width="600">
+
+<img src="http://hyperphysics.phy-astr.gsu.edu/hbase/math/immath/dpol.gif" width="300">
 
 Source: [Hyperphysics](http://hyperphysics.phy-astr.gsu.edu/hbase/deriv.html)
+
+Or for a specific example.
+
+<img src="https://www.wikihow.com/images/thumb/b/bb/Differentiate-Polynomials-Step-4-Version-2.jpg/550px-nowatermark-Differentiate-Polynomials-Step-4-Version-2.jpg" width="400">
+
+Source: [WikiHow](https://www.wikihow.com/Differentiate-Polynomials)
 
 Taking the derivative of the polynomial above using this algorithm:
 
@@ -45,9 +52,14 @@ on Khan Academy descibing the concept.
 The indefinite integral of a polynomial is the sum of the integrals of each of its terms.
 Algorithmically, you can determine it like this:
 
-<img src="./images/integral_polynomial.png" width="600">
+<img src="http://hyperphysics.phy-astr.gsu.edu/hbase/imgmth/ipol2.gif" width="300">
 
 Source: [Hyperphysics](http://hyperphysics.phy-astr.gsu.edu/hbase/intpol.html)
+
+For a specific example:
+<img src="https://revisionworld.com/sites/revisionworld.com/files/imce/int2.gif" width="400">
+
+Source: [Revised Math](https://revisionmaths.com/advanced-level-maths-revision/pure-maths/calculus/integration)
 
 Taking the indefinite integral of the example polynomial using this algorithm:
 
@@ -69,7 +81,7 @@ for the constant:
     2nd term: 8x        2nd term integral: 8 / (1+1) * x^(1+1) = 4 * x^2 = 4x^2 + C2
 
     the integral of the derivative is : C + x + 4x^2 
-    this is almost the original polynomial - it just differs by a constant.
+    this is almost the original polynomial - it just differs by a constant. For the assignment, please set the constant to 0.
 
 For these to match exactly you would need to use definite integrals with limits to the
 integration (not key to this assignment).
